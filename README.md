@@ -1,7 +1,7 @@
-# <p align="center">🔮 WELCOME TO MY DEVELOPMENT TERMINAL 🔮</p>
+# <p align="center">📖 WELCOME TO MY ENGINEERING NOTEBOOK 📖</p>
 
 <p align="center">
-  <img src="assets/banner.svg" alt="MUKILARASU S Banner" width="100%" />
+  <img src="assets/notebook_profile_hero.jpg" alt="MUKILARASU S Notebook" width="100%" />
 </p>
 
 <p align="center">
