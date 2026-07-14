@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/cyberpunk_hologram_hero.jpg" alt="MUKILARASU S Hologram" width="100%" />
+  <img src="assets/animated_cyberpunk_hologram.svg" alt="MUKILARASU S Hologram" width="100%" />
 </p>
 
 <p align="center">
