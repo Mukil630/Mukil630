@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=39FF14&center=true&vCenter=true&width=550&lines=Java+Developer;Spring+Boot+Developer;AI+Automation+Engineer;Open+Source+Learner;Freelancer" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=39FF14&center=true&vCenter=true&width=550&lines=Java+Developer;Full-Stack+Developer;AI+%26+Automation+Engineer;Freelancer" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -19,11 +19,11 @@
 
 ### 🧬 About Me
 
-I am a final-year **B.Tech Information Technology** student at **VSB Engineering College, Karur** (CGPA: **8.1/10**), specializing in building high-performance Java backend services, automating complex workflows, and integrating artificial intelligence into production systems. 
+I am a final-year **B.Tech Information Technology** student at **VSB Engineering College, Karur** (CGPA: **8.1/10**), with hands-on experience in AI, automation, and full-stack development. 
 
+*   💡 **My Philosophy:** Building production-ready, scalable applications and intelligent agents that solve real-world business challenges.
 *   💼 **Practical Experience:** Completed internships at **Hero MotoCorp Ltd.** (R&D Division) and **IBM** (AI & Automation).
-*   🚀 **Freelance Work:** Architected and deployed production SaaS products, Visual workflow systems, and commercial automation engines for retail clients.
-*   🤖 **Focus Area:** Clean code, robust API architecture, background task scheduling, database optimization, and multi-agent AI systems.
+*   🚀 **Freelance Work:** Successfully shipped multiple freelance systems including multi-tenant SaaS platforms, desktop billing software, and custom bot solutions.
 
 ---
 
@@ -32,89 +32,84 @@ I am a final-year **B.Tech Information Technology** student at **VSB Engineering
 <table width="100%">
   <tr>
     <td valign="top" width="50%">
-      <h4>☕ Languages & Core</h4>
+      <h4>💻 Languages & Core</h4>
       <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
       <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
       <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-      <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-      <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+      <img src="https://img.shields.io/badge/SQL-00758F?style=flat-square&logo=mysql&logoColor=white" alt="SQL" />
     </td>
     <td valign="top" width="50%">
       <h4>🚀 Backend & Frameworks</h4>
       <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=spring-boot&logoColor=white" alt="Spring Boot" />
-      <img src="https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+      <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
       <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node" />
-      <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
       <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask" />
       <img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" alt="Electron" />
     </td>
   </tr>
   <tr>
     <td valign="top" width="50%">
-      <h4>🤖 AI & Automation</h4>
-      • **LLM API Integration:** Anthropic Claude, OpenAI, Groq<br>
-      • **Agents:** Autonomous Visual Workflows, LangChain<br>
-      • **Bots:** Telegram Bot API, WhatsApp Web.js, Baileys<br>
-      • **Headless Tools:** Puppeteer (Automated PDF/Reports)
+      <h4>🗄️ Databases</h4>
+      <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+      <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
     </td>
     <td valign="top" width="50%">
-      <h4>☁️ DevOps & Databases</h4>
-      <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-      <img src="https://img.shields.io/badge/SQLite-07405E?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
-      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
-      <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" alt="Prisma" />
-      <img src="https://img.shields.io/badge/Railway-131415?style=flat-square&logo=railway&logoColor=white" alt="Railway" />
+      <h4>☁️ Tools & Platforms</h4>
       <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+      <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+      <img src="https://img.shields.io/badge/Railway-131415?style=flat-square&logo=railway&logoColor=white" alt="Railway" />
+      <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman" />
     </td>
   </tr>
 </table>
 
 ---
 
-### 📂 Premium Featured Projects
+### 📂 Featured Projects
 
-#### 🌐 [Zora — The Autonomous Agent Grid](https://github.com/Mukil630/Zora)
-*A visual, node-based automation workflow builder designed to wire together and manage autonomous AI agents.*
-- **Tech Stack:** React 18, TypeScript, Vite, Node.js Express, Prisma ORM, PostgreSQL, Zustand, Stripe, Docker.
-- **Highlights:** Drag-and-drop workspace canvas, visual log step-by-step execution tracking, plain-English error helper, Stripe subscriptions, and multi-LLM (Claude/OpenAI) agent node workers.
+#### 💬 [Botify – AI-Powered WhatsApp Bot SaaS (Freelance)](https://github.com/Mukil630/Botify)
+*A production-ready multi-tenant SaaS platform enabling businesses to deploy custom AI-powered WhatsApp bots.*
+- **Tech Stack:** Flask, Node.js, Groq LLM, PostgreSQL, Railway.
+- **Key Features:** Supports context-aware AI chat automation, appointment booking, tiered subscription models, and an admin dashboard.
 
-#### 💬 [Botify — WhatsApp SaaS Platform](https://github.com/Mukil630/Botify)
-*A multi-tenant SaaS application allowing business owners to deploy customized, AI-driven WhatsApp support agents.*
-- **Tech Stack:** Flask, Node.js, `whatsapp-web.js` (Puppeteer session runner), Groq LLM, PostgreSQL, Railway.
-- **Highlights:** QR-code linking mechanism, automated appointment scheduling, tiered subscription billing limits, and business info customization for context-aware customer support.
+#### 💳 [SGC Billing – Desktop Invoice Application (Freelance)](https://github.com/Mukil630)
+*A desktop-based billing and invoice creation system for retail clients.*
+- **Tech Stack:** Electron, React, Puppeteer, Google Drive API.
+- **Key Features:** Interactive React forms for invoice entries, automated headless PDF invoice compilation with Puppeteer, and secure cloud sync to Google Drive via OAuth.
 
-#### 🛍️ [Aura (SAIVI Collection) — Telegram-Managed Store](https://github.com/Mukil630/clothing-store)
-*An ultra-modern, glassmorphic streetwear storefront backed by a real-time inventory management Telegram Bot.*
-- **Tech Stack:** Vite, React, Node.js Express, Telegram Bot API.
-- **Highlights:** Dynamic catalog rendering with category filters. Integrated admin bot commands allowing store owners to upload new catalog photos, edit stock descriptions, and receive immediate checkout alerts.
+#### 🤖 [Personal AI Assistant (Jarvis) (Personal Project)](https://github.com/Mukil630)
+*A voice-controlled desktop virtual assistant automating local tasks.*
+- **Tech Stack:** Python, Speech Recognition, Text-to-Speech (TTS), System APIs.
+- **Key Features:** Triggers voice-based conversations, performs web searches, executes OS automation commands, and handles system scripts.
 
-#### 🖥️ [SGC Billing — Desktop Invoice App](https://github.com/Mukil630/nexus-desktop)
-*A desktop-based billing and invoice generation application with cloud synchronization.*
-- **Tech Stack:** Electron, React.js, Puppeteer, Google Drive API (OAuth 2.0).
-- **Highlights:** Fast invoice creation forms, automated headless PDF generation, and secure, direct cloud synchronization to Google Drive.
+#### 📝 [AI Billing Automation Bot (Freelance)](https://github.com/Mukil630)
+*An intelligent Telegram-based billing system that processes handwritten invoices.*
+- **Tech Stack:** Python, Groq LLM API, Telegram Bot API, Cloudinary.
+- **Key Features:** Uses LLM vision to extract structured JSON data from handwritten bill images, auto-matches customers, uploads receipts to Cloudinary, and delivers digital invoices to clients.
 
-#### 🤖 [AI Billing Automation Bot](https://github.com/Mukil630)
-*An intelligent Telegram bot designed to automate receipt and invoice processing for retail clients.*
-- **Tech Stack:** Python, Groq LLM, Telegram Bot API, Google Sheets API.
-- **Highlights:** Extracts structured JSON data from handwritten bill images, auto-generates invoice sheets, and updates client database registers with tax validation.
+#### 📧 [Gmail Automation Agent (Personal Project)](https://github.com/Mukil630)
+*An AI automation agent overseeing calendar schedules and inbox correspondence.*
+- **Tech Stack:** Python, Gmail API, Google Calendar API.
+- **Key Features:** Drafts intelligent context-aware replies to emails, schedules events, triggers task reminders, and structures automated mail workflows.
 
 ---
 
-### 📅 Experience Timeline
+### 💼 Internships
 
-```mermaid
-gantt
-    title Professional Roadmap
-    dateFormat  YYYY
-    axisFormat  %Y
-    
-    section Growth
-    Java Backend Core & Frameworks    :active, growth1, 2024, 2025
-    Freelancing & Custom SaaS Dev     :active, freelancing, 2025, 2026
-    Placement Prep & System Design    :active, prep, 2026, 2027
-    Software Engineer Career          :milestone, job, 2027, 1d
-```
+- **Hero MotoCorp Ltd. — Research & Development Intern (1 Month)**
+  *Gained practical exposure to engineering workflows, automotive research, and product development processes.*
+- **IBM — AI & Automation Weekend Internship (2026)**
+  *Completed a hands-on curriculum covering core AI concepts, automation pipelines, and intelligent system applications.*
+
+---
+
+### 🏆 Certifications
+
+- 🏅 **AI & Automation** — Full Course Completion (2025)
+- 🏅 **AI & ML Made Easy: From Basic to Advanced** — Udemy (2025)
+- 🏅 **Demystifying Networking** — NPTEL (2025)
+- 🏅 **Infosys Certified Java Programmer** — Infosys (2024)
+- 🏅 **AI Agents for Beginners** — Simplilearn SkillUp (2026)
 
 ---
 
