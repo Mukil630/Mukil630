@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Rubik+Mono+One&size=17&color=FFFFFF&center=true&vCenter=true&width=850&height=55&loop=false&lines=%E2%9A%A1+WELCOME+TO+MY+PROFESSIONAL+FREELANCE+%26+ENGINEERING+PORTFOLIO+%E2%9A%A1" alt="WELCOME TO MY PROFESSIONAL PORTFOLIO" />
+  <img src="https://readme-typing-svg.demolab.com?font=Rubik+Mono+One&size=22&color=FFFFFF&center=true&vCenter=true&width=850&height=55&loop=false&lines=%E2%9A%A1+WELCOME+TO+MY+GITHUB+PROFILE+%E2%9A%A1" alt="WELCOME TO MY GITHUB PROFILE" />
 </p>
 
 <p align="center">
