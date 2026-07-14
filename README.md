@@ -22,8 +22,14 @@
 I am a final-year **B.Tech Information Technology** student at **VSB Engineering College, Karur** (CGPA: **8.1/10**), with hands-on experience in AI, automation, and full-stack development. 
 
 *   💡 **My Philosophy:** Building production-ready, scalable applications and intelligent agents that solve real-world business challenges.
-*   💼 **Practical Experience:** Completed internships at **Hero MotoCorp Ltd.** (R&D Division) and **IBM** (AI & Automation).
-*   🚀 **Freelance Work:** Successfully shipped multiple freelance systems including multi-tenant SaaS platforms, desktop billing software, and custom bot solutions.
+*   ☕ **Backend Focus:** Developing enterprise-grade Java backends utilizing **Spring Boot**, designing microservices, configuring JPA/Hibernate, and structuring secure RESTful APIs.
+*   🤖 **AI & Automation Specialist:** Integrating Large Language Models (LLMs) like Claude, GPT, and Groq into modular workflows. Experiencing in RAG architectures, prompt engineering, vector searching, and autonomous task execution agents.
+*   📦 **Full-Stack & Desktop:** Constructing cross-platform desktop interfaces with **Electron** and **React**, and deploying multi-tenant SaaS structures on **Railway**.
+*   📚 **CS Fundamentals:** Strong foundation in Data Structures & Algorithms (DSA) in Java, Relational Database Management Systems (DBMS), and Computer Networks.
+
+<p align="left">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&pause=1000&color=39FF14&width=550&lines=%3E_Initializing+development+environment...;%3E_Establishing+connection+to+PostgreSQL+database...;%3E_Spawning+autonomous+AI+agents...;%3E_System+online.+Backend+services+active+100%25%21" alt="Terminal Action Animation" />
+</p>
 
 ---
 
