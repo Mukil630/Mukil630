@@ -1,7 +1,7 @@
-# <p align="center">🔮 WELCOME TO MY DEVELOPER SPELLBOOK 🔮</p>
+# <p align="center">💻 WELCOME TO MY WORKSPACE 💻</p>
 
 <p align="center">
-  <img src="assets/developer_spellbook_hero.jpg" alt="MUKILARASU S Spellbook" width="100%" />
+  <img src="assets/premium_desk_hero.jpg" alt="MUKILARASU S Workspace" width="100%" />
 </p>
 
 <p align="center">
