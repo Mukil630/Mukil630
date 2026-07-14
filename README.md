@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&color=FFFFFF&center=true&vCenter=true&width=800&height=55&lines=%E2%9A%A1+WELCOME+TO+MY+CYBERNETIC+WORKSPACE+%E2%9A%A1" alt="WELCOME TO MY CYBERNETIC WORKSPACE" />
+  <img src="https://readme-typing-svg.demolab.com?font=Rubik+Mono+One&size=22&color=FFFFFF&center=true&vCenter=true&width=850&height=55&lines=%E2%9A%A1+WELCOME+TO+MY+CYBERNETIC+WORKSPACE+%E2%9A%A1" alt="WELCOME TO MY CYBERNETIC WORKSPACE" />
 </p>
 
 <p align="center">
@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=FFFFFF&center=true&vCenter=true&width=550&lines=Java+Developer;Full-Stack+Developer;AI+%26+Automation+Engineer;Freelancer" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=FFFFFF&center=true&vCenter=true&width=550&lines=Java+Developer;Full-Stack+Developer;AI+%26+Automation+Engineer;Freelancer" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@ I am a final-year **B.Tech Information Technology** student at **VSB Engineering
 *   📚 **CS Fundamentals:** Strong foundation in Data Structures & Algorithms (DSA) in Java, Relational Database Management Systems (DBMS), and Computer Networks.
 
 <p align="left">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&pause=1000&color=FFFFFF&width=550&lines=%3E_Initializing+development+environment...;%3E_Establishing+connection+to+PostgreSQL+database...;%3E_Spawning+autonomous+AI+agents...;%3E_System+online.+Backend+services+active+100%25%21" alt="Terminal Action Animation" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=14&pause=1000&color=FFFFFF&width=550&lines=%3E_Initializing+development+environment...;%3E_Establishing+connection+to+PostgreSQL+database...;%3E_Spawning+autonomous+AI+agents...;%3E_System+online.+Backend+services+active+100%25%21" alt="Terminal Action Animation" />
 </p>
 
 ---
