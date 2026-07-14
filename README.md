@@ -1,7 +1,7 @@
-# <p align="center">📖 WELCOME TO MY ENGINEERING NOTEBOOK 📖</p>
+# <p align="center">⚡ WELCOME TO MY DEVELOPMENT PORTFOLIO DASHBOARD ⚡</p>
 
 <p align="center">
-  <img src="assets/notebook_profile_hero.jpg" alt="MUKILARASU S Notebook" width="100%" />
+  <img src="assets/cyberpunk_dashboard_hero.jpg" alt="MUKILARASU S Cyberpunk Dashboard" width="100%" />
 </p>
 
 <p align="center">
