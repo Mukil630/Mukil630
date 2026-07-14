@@ -1,7 +1,7 @@
-# <p align="center">💻 WELCOME TO MY WORKSPACE 💻</p>
+# <p align="center">⚡ WELCOME TO MY CYBERNETIC WORKSPACE ⚡</p>
 
 <p align="center">
-  <img src="assets/modern_office_hero.jpg" alt="MUKILARASU S Workstation" width="100%" />
+  <img src="assets/cyberpunk_hologram_hero.jpg" alt="MUKILARASU S Hologram" width="100%" />
 </p>
 
 <p align="center">
