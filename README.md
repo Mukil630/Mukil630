@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/animated_workspace_title.svg" alt="WELCOME TO MY CYBERNETIC WORKSPACE" width="100%" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&color=39FF14&center=true&vCenter=true&width=800&height=55&lines=%E2%9A%A1+WELCOME+TO+MY+CYBERNETIC+WORKSPACE+%E2%9A%A1" alt="WELCOME TO MY CYBERNETIC WORKSPACE" />
 </p>
 
 <p align="center">
