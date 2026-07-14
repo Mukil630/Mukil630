@@ -1,0 +1,333 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <!-- Imports handwriting font from Google Fonts -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;family=Architects+Daughter&amp;family=Consolas&amp;display=swap');
+
+      /* General Keyframes */
+      @keyframes writeText {
+        from { stroke-dashoffset: 500; opacity: 0; }
+        to { stroke-dashoffset: 0; opacity: 1; }
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes drawLine {
+        from { stroke-dashoffset: 1000; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes spinGear {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes pulseLight {
+        0% { opacity: 0.4; }
+        50% { opacity: 0.9; }
+        100% { opacity: 0.4; }
+      }
+
+      /* Timing Classes for Sequential Text Writing */
+      .write-title {
+        font-family: 'Architects Daughter', 'Segoe UI', sans-serif;
+        font-size: 32px;
+        fill: #0d1b2a;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out 0.5s forwards;
+      }
+      .write-subtitle {
+        font-family: 'Caveat', cursive;
+        font-size: 22px;
+        fill: #0077b6;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out 1.8s forwards;
+      }
+      .write-body-1 {
+        font-family: 'Caveat', cursive;
+        font-size: 18px;
+        fill: #1b263b;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out 3s forwards;
+      }
+      .write-body-2 {
+        font-family: 'Caveat', cursive;
+        font-size: 18px;
+        fill: #1b263b;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out 4.2s forwards;
+      }
+      .write-body-3 {
+        font-family: 'Caveat', cursive;
+        font-size: 18px;
+        fill: #1b263b;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out 5.4s forwards;
+      }
+
+      /* Sticky notes and photo fades */
+      .fade-photo {
+        opacity: 0;
+        animation: fadeIn 2s ease-out 1s forwards;
+      }
+      .fade-sticky {
+        opacity: 0;
+        animation: fadeIn 2s ease-out 4s forwards;
+      }
+      .draw-graph {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: drawLine 4s ease-in-out 5s forwards;
+      }
+      .draw-checklist {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        animation: drawLine 1.5s ease-in-out 6s forwards;
+      }
+      .spin-element {
+        animation: spinGear 30s linear infinite;
+        transform-origin: 750px 60px;
+      }
+      .pulse-dots {
+        animation: pulseLight 3s ease-in-out infinite;
+      }
+    </style>
+
+    <!-- Spiral Rings Pattern -->
+    <pattern id="spiralRing" width="40" height="450" patternUnits="userSpaceOnUse">
+      <path d="M 18 10 C 18 2 22 2 22 10 L 22 25 C 22 33 18 33 18 25 Z" fill="#94a3b8" />
+      <path d="M 15 15 L 25 15 M 15 16 L 25 16" stroke="#475569" stroke-width="1.5" />
+    </pattern>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.15" />
+    </filter>
+
+    <filter id="photoShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Desk Background (Dark Slate) -->
+  <rect width="100%" height="100%" fill="#0f172a" />
+  
+  <!-- Desk details (Wood texture hints) -->
+  <path d="M 0 80 L 800 80 M 0 220 L 800 220 M 0 350 L 800 350" stroke="#1e293b" stroke-width="2" stroke-opacity="0.3" />
+
+  <!-- The Open Notebook (Two Pages) -->
+  <g filter="url(#shadow)">
+    <!-- Main Paper Sheets -->
+    <rect x="50" y="20" width="340" height="410" fill="#fdfcf7" rx="3" />
+    <rect x="410" y="20" width="340" height="410" fill="#fdfcf7" rx="3" />
+
+    <!-- Left Page Ruling Lines (Blue lines, red margin) -->
+    <line x1="85" y1="20" x2="85" y2="430" stroke="#fca5a5" stroke-width="1.5" stroke-opacity="0.7" />
+    <!-- Horizontal Blue lines -->
+    <g stroke="#93c5fd" stroke-width="0.75" stroke-opacity="0.5">
+      <line x1="50" y1="60" x2="390" y2="60" /><line x1="50" y1="90" x2="390" y2="90" />
+      <line x1="50" y1="120" x2="390" y2="120" /><line x1="50" y1="150" x2="390" y2="150" />
+      <line x1="50" y1="180" x2="390" y2="180" /><line x1="50" y1="210" x2="390" y2="210" />
+      <line x1="50" y1="240" x2="390" y2="240" /><line x1="50" y1="270" x2="390" y2="270" />
+      <line x1="50" y1="300" x2="390" y2="300" /><line x1="50" y1="330" x2="390" y2="330" />
+      <line x1="50" y1="360" x2="390" y2="360" /><line x1="50" y1="390" x2="390" y2="390" />
+    </g>
+
+    <!-- Right Page Ruling Lines (Blue lines, red margin) -->
+    <line x1="435" y1="20" x2="435" y2="430" stroke="#fca5a5" stroke-width="1.5" stroke-opacity="0.7" />
+    <!-- Horizontal Blue lines -->
+    <g stroke="#93c5fd" stroke-width="0.75" stroke-opacity="0.5">
+      <line x1="410" y1="60" x2="750" y2="60" /><line x1="410" y1="90" x2="750" y2="90" />
+      <line x1="410" y1="120" x2="750" y2="120" /><line x1="410" y1="150" x2="750" y2="150" />
+      <line x1="410" y1="180" x2="750" y2="180" /><line x1="410" y1="210" x2="750" y2="210" />
+      <line x1="410" y1="240" x2="750" y2="240" /><line x1="410" y1="270" x2="750" y2="270" />
+      <line x1="410" y1="300" x2="750" y2="300" /><line x1="410" y1="330" x2="750" y2="330" />
+      <line x1="410" y1="360" x2="750" y2="360" /><line x1="410" y1="390" x2="750" y2="390" />
+    </g>
+  </g>
+
+  <!-- Spiral Binder Middle (Spans vertical division) -->
+  <g transform="translate(380, 20)">
+    <!-- Back wire shadows -->
+    <rect x="8" y="0" width="4" height="410" fill="#334155" opacity="0.3" />
+    <!-- Spirals loops repeating -->
+    <rect x="0" y="10" width="20" height="8" rx="4" fill="#64748b" />
+    <rect x="0" y="40" width="20" height="8" rx="4" fill="#64748b" />
+    <rect x="0" y="70" width="20" height="8" rx="4" fill="#64748b" />
+    <rect x="0" y="100" width="20" height="8" rx="4" fill="#64748b" />
+    <rect x="0" y="130" width="20" height="8" rx="4" fill="#64748b" />
+    <rect x="0" y="160" width="20" height="8" rx="4" fill="#64748b" />
+    <rect x="0" y="190" width="20" height="8" rx="4" fill="#64748b" />
+    <rect x="0" y="220" width="20" height="8" rx="4" fill="#64748b" />
+    <rect x="0" y="250" width="20" height="8" rx="4" fill="#64748b" />
+    <rect x="0" y="280" width="20" height="8" rx="4" fill="#64748b" />
+    <rect x="0" y="310" width="20" height="8" rx="4" fill="#64748b" />
+    <rect x="0" y="340" width="20" height="8" rx="4" fill="#64748b" />
+    <rect x="0" y="370" width="20" height="8" rx="4" fill="#64748b" />
+    <rect x="0" y="400" width="20" height="8" rx="4" fill="#64748b" />
+  </g>
+
+  <!-- ==================== LEFT PAGE CONTENT ==================== -->
+  
+  <!-- Polaroid Photo of the User -->
+  <g class="fade-photo" transform="translate(95, 235) rotate(-4)" filter="url(#photoShadow)">
+    <!-- Photo backing card -->
+    <rect width="105" height="125" fill="#ffffff" rx="2" />
+    <!-- Inner image crop (Using Live GitHub Avatar URL) -->
+    <image href="https://avatars.githubusercontent.com/Mukil630" x="8" y="8" width="89" height="89" clip-path="inset(0% round 2px)" />
+    <!-- Captions on Polaroid -->
+    <text x="12" y="112" font-family="'Caveat', cursive" font-size="14" fill="#222">Dream Company 🎯</text>
+    <text x="12" y="121" font-family="'Consolas', monospace" font-size="7" fill="#666">&gt;_ Software Engineer</text>
+    
+    <!-- Realistic Pinned Paperclip on top -->
+    <path d="M 45 -5 L 60 -5 A 5 5 0 0 1 65 0 L 65 20 A 4 4 0 0 1 61 24 L 53 24 A 4 4 0 0 1 49 20 L 49 5" fill="none" stroke="#94a3b8" stroke-width="2" />
+    <path d="M 53 0 L 53 15 A 2 2 0 0 0 55 17 L 57 17 A 2 2 0 0 0 59 15 L 59 0" fill="none" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- Masking tape on top corner -->
+    <rect x="15" y="-12" width="25" height="15" fill="#fef08a" opacity="0.6" transform="rotate(15)" />
+  </g>
+
+  <!-- Pinned Notes Beside Polaroid -->
+  <text x="215" y="270" class="write-body-2" font-size="18" fill="#0077b6">"Keep Building."</text>
+  <path d="M 210 280 Q 235 275 270 282" fill="none" stroke="#0077b6" stroke-width="1.5" class="draw-checklist" />
+
+  <!-- Handwritten Name Title (Left page top) -->
+  <text x="100" y="82" class="write-title">MUKILARASU S</text>
+
+  <!-- Subtitles (Writing Effect) -->
+  <text x="100" y="112" class="write-subtitle">Java Backend Developer • AI Engineer</text>
+
+  <!-- Summary text paragraphs (Handwritten simulation) -->
+  <text x="100" y="142" class="write-body-1">"I'm passionate about building scalable backend</text>
+  <text x="100" y="172" class="write-body-2">systems, AI workflow engines, and modern SaaS</text>
+  <text x="100" y="202" class="write-body-3">solutions that solve real-world problems."</text>
+
+  <!-- VSB Engineering College note -->
+  <text x="100" y="380" class="write-body-2" font-size="15" fill="#52525b">🎓 VSB Eng. College | B.Tech IT | CGPA: 8.1</text>
+
+  <!-- ==================== RIGHT PAGE CONTENT ==================== -->
+
+  <!-- Heading: Tech Stack -->
+  <text x="450" y="52" font-family="'Architects Daughter', sans-serif" font-size="18" font-weight="bold" fill="#0f172a">TECH STACK</text>
+  
+  <!-- Custom Drawn Tech Icons Grid -->
+  <g transform="translate(450, 70)" filter="url(#subtleGlow)">
+    <!-- Java -->
+    <rect x="0" y="0" width="30" height="20" rx="3" fill="#ED8B00" fill-opacity="0.15" />
+    <text x="5" y="14" font-family="'Consolas', monospace" font-size="11" fill="#ED8B00" font-weight="bold">JAVA</text>
+
+    <!-- Spring Boot -->
+    <rect x="42" y="0" width="70" height="20" rx="3" fill="#6DB33F" fill-opacity="0.15" />
+    <text x="47" y="14" font-family="'Consolas', monospace" font-size="11" fill="#6DB33F" font-weight="bold">SPRINGBOOT</text>
+
+    <!-- Python -->
+    <rect x="122" y="0" width="50" height="20" rx="3" fill="#3776AB" fill-opacity="0.15" />
+    <text x="127" y="14" font-family="'Consolas', monospace" font-size="11" fill="#3776AB" font-weight="bold">PYTHON</text>
+
+    <!-- React -->
+    <rect x="182" y="0" width="45" height="20" rx="3" fill="#0080ff" fill-opacity="0.15" />
+    <text x="187" y="14" font-family="'Consolas', monospace" font-size="11" fill="#00c8ff" font-weight="bold">REACT</text>
+
+    <!-- PostgreSQL -->
+    <rect x="0" y="30" width="75" height="20" rx="3" fill="#316192" fill-opacity="0.15" />
+    <text x="5" y="44" font-family="'Consolas', monospace" font-size="11" fill="#316192" font-weight="bold">POSTGRESQL</text>
+
+    <!-- Docker -->
+    <rect x="85" y="30" width="55" height="20" rx="3" fill="#2496ED" fill-opacity="0.15" />
+    <text x="90" y="44" font-family="'Consolas', monospace" font-size="11" fill="#2496ED" font-weight="bold">DOCKER</text>
+
+    <!-- Git -->
+    <rect x="150" y="30" width="35" height="20" rx="3" fill="#F05032" fill-opacity="0.15" />
+    <text x="155" y="44" font-family="'Consolas', monospace" font-size="11" fill="#F05032" font-weight="bold">GIT</text>
+  </g>
+
+  <!-- Heading: Featured Projects -->
+  <text x="450" y="148" font-family="'Architects Daughter', sans-serif" font-size="17" font-weight="bold" fill="#0f172a">FEATURED PROJECTS</text>
+
+  <!-- Sticky Notes (Yellow & Cyan Project Cards) -->
+  <g class="fade-sticky">
+    <!-- Sticky Card 1: Botify (WhatsApp SaaS) -->
+    <g transform="translate(450, 165)" filter="url(#shadow)">
+      <rect width="130" height="90" fill="#fef9c3" rx="2" transform="rotate(-2)" />
+      <!-- Content -->
+      <text x="10" y="22" font-family="'Architects Daughter', sans-serif" font-size="12" font-weight="bold" fill="#1e293b" transform="rotate(-2)">🤖 Botify</text>
+      <text x="10" y="38" font-family="'Caveat', cursive" font-size="13" fill="#475569" transform="rotate(-2)">WhatsApp AI SaaS</text>
+      <text x="10" y="53" font-family="'Caveat', cursive" font-size="12" fill="#0077b6" transform="rotate(-2)">• Flask + Node.js</text>
+      <text x="10" y="68" font-family="'Caveat', cursive" font-size="12" fill="#0077b6" transform="rotate(-2)">• Groq LLM API</text>
+      <text x="10" y="81" font-family="'Consolas', monospace" font-size="7" fill="#64748b" transform="rotate(-2)">github.com/Botify</text>
+    </g>
+
+    <!-- Sticky Card 2: Zora (Agent Builder) -->
+    <g transform="translate(595, 160)" filter="url(#shadow)">
+      <rect width="130" height="90" fill="#cffafe" rx="2" transform="rotate(3)" />
+      <!-- Content -->
+      <text x="10" y="22" font-family="'Architects Daughter', sans-serif" font-size="12" font-weight="bold" fill="#1e293b" transform="rotate(3)">🧠 Zora</text>
+      <text x="10" y="38" font-family="'Caveat', cursive" font-size="13" fill="#475569" transform="rotate(3)">AI Workflow Engine</text>
+      <text x="10" y="53" font-family="'Caveat', cursive" font-size="12" fill="#0077b6" transform="rotate(3)">• React + Express</text>
+      <text x="10" y="68" font-family="'Caveat', cursive" font-size="12" fill="#0077b6" transform="rotate(3)">• Prisma + Docker</text>
+      <text x="10" y="81" font-family="'Consolas', monospace" font-size="7" fill="#64748b" transform="rotate(3)">github.com/Zora</text>
+    </g>
+  </g>
+
+  <!-- Heading: Daily Checklist -->
+  <text x="450" y="285" font-family="'Architects Daughter', sans-serif" font-size="16" font-weight="bold" fill="#0f172a">DAILY TARGETS</text>
+
+  <!-- Hand-drawn checklist items -->
+  <g transform="translate(450, 300)" font-family="'Caveat', cursive" font-size="16" fill="#1e293b">
+    <!-- Item 1 -->
+    <rect x="0" y="0" width="12" height="12" fill="none" stroke="#0077b6" stroke-width="1.5" />
+    <path d="M -2 4 L 4 10 L 14 -2" fill="none" stroke="#0077b6" stroke-width="2" class="draw-checklist" />
+    <text x="22" y="11">Daily DSA Practice</text>
+
+    <!-- Item 2 -->
+    <rect x="0" y="24" width="12" height="12" fill="none" stroke="#0077b6" stroke-width="1.5" />
+    <path d="M -2 28 L 4 34 L 14 22" fill="none" stroke="#0077b6" stroke-width="2" class="draw-checklist" />
+    <text x="22" y="35">System Design study</text>
+
+    <!-- Item 3 -->
+    <rect x="0" y="48" width="12" height="12" fill="none" stroke="#0077b6" stroke-width="1.5" />
+    <path d="M -2 52 L 4 58 L 14 46" fill="none" stroke="#0077b6" stroke-width="2" class="draw-checklist" />
+    <text x="22" y="59">Commit open-source codes</text>
+  </g>
+
+  <!-- Handwritten coding activity graph at the bottom -->
+  <g transform="translate(450, 375)" filter="url(#subtleGlow)">
+    <text x="0" y="-8" font-family="'Architects Daughter', sans-serif" font-size="11" fill="#64748b">COMMIT ACTIVITY (INK GRAPH)</text>
+    <!-- Graph borders/axis -->
+    <path d="M 0 35 L 260 35 M 0 35 L 0 0" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2 2" />
+    <!-- Graph peaks (animating) -->
+    <path d="M 0 32 Q 20 5 40 30 T 80 10 T 120 28 T 160 8 T 200 25 T 240 12 L 255 32" fill="none" stroke="#0077b6" stroke-width="2" class="draw-graph" />
+    <!-- Little ink dots -->
+    <circle cx="80" cy="10" r="2" fill="#0077b6" class="pulse-dots" />
+    <circle cx="160" cy="8" r="2" fill="#0077b6" class="pulse-dots" />
+  </g>
+
+  <!-- ==================== DECORATIONS / DOODLES ==================== -->
+  
+  <!-- Tiny rotating Gear (Top Right Corner) -->
+  <g class="spin-element" transform="translate(750, 60)" fill="none" stroke="#cbd5e1" stroke-width="1.5">
+    <circle cx="0" cy="0" r="15" />
+    <!-- Teeth -->
+    <rect x="-3" y="-19" width="6" height="6" />
+    <rect x="-3" y="13" width="6" height="6" />
+    <rect x="-19" y="-3" width="6" height="6" />
+    <rect x="13" y="-3" width="6" height="6" />
+    <circle cx="0" cy="0" r="5" fill="#fdfcf7" />
+  </g>
+  <text x="715" y="85" font-family="'Consolas', monospace" font-size="7" fill="#94a3b8">sys_clock.dll</text>
+
+  <!-- Coffee stain bottom-left -->
+  <ellipse cx="65" cy="420" rx="30" ry="12" fill="none" stroke="#78350f" stroke-width="1" stroke-opacity="0.1" transform="rotate(15 65 420)" />
+  <circle cx="50" cy="415" r="8" fill="#78350f" fill-opacity="0.05" />
+
+  <!-- Doodles: AI Brain sketch (Left page bottom) -->
+  <g transform="translate(320, 360)" stroke="#94a3b8" stroke-width="0.75" fill="none" opacity="0.5">
+    <!-- Left hemisphere -->
+    <path d="M 20 0 C 10 -10 5 -5 5 10 C 5 25 15 30 20 35 Z" />
+    <!-- Right hemisphere (Digital nodes) -->
+    <circle cx="35" cy="-8" r="1.5" fill="#94a3b8" /><circle cx="45" cy="5" r="1.5" fill="#94a3b8" />
+    <circle cx="40" cy="20" r="1.5" fill="#94a3b8" /><circle cx="32" cy="30" r="1.5" fill="#94a3b8" />
+    <path d="M 20 0 L 35 -8 M 20 10 L 45 5 M 20 20 L 40 20 M 20 30 L 32 30" />
+  </g>
+
+  <!-- Motivational quote bottom-left -->
+  <text x="100" y="415" font-family="'Caveat', cursive" font-size="14" fill="#64748b">"Code today. Create tomorrow."</text>
+</svg>
