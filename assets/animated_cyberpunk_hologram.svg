@@ -56,8 +56,8 @@
     }
   </style>
 
-  <!-- Background 3D Photorealistic Image -->
-  <image href="cyberpunk_hologram_hero.jpg" x="0" y="0" width="1200" height="675" />
+  <!-- Background 3D Photorealistic Image (Absolute Raw GitHub Path) -->
+  <image href="https://raw.githubusercontent.com/Mukil630/Mukil630/main/assets/cyberpunk_hologram_hero.jpg" x="0" y="0" width="1200" height="675" />
 
   <!-- Animated Vector Overlays on Portrait Circle -->
   <g filter="url(#neonBlueGlow)">
