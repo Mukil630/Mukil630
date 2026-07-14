@@ -1,7 +1,7 @@
-# <p align="center">⚡ WELCOME TO MY DEVELOPMENT PORTFOLIO DASHBOARD ⚡</p>
+# <p align="center">💎 WELCOME TO MY PORTFOLIO 💎</p>
 
 <p align="center">
-  <img src="assets/animated_cyberpunk_dashboard.svg" alt="MUKILARASU S Cyberpunk Dashboard" width="100%" />
+  <img src="assets/holographic_tech_card.jpg" alt="MUKILARASU S Developer Card" width="100%" />
 </p>
 
 <p align="center">
