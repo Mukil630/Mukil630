@@ -121,12 +121,20 @@ gantt
 ### 📊 Coding Analytics & Activity
 
 <p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Mukil630&theme=tokyonight&margin-w=15&no-background=true&no-border=true" alt="Mukil630 Trophies" width="100%" />
+</p>
+
+<p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Mukil630&show_icons=true&theme=tokyonight&hide_border=true&align=center" alt="Mukil630's GitHub Stats" width="48%" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mukil630&layout=compact&theme=tokyonight&hide_border=true&align=center" alt="Mukil630's Top Languages" width="48%" />
 </p>
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mukil630&theme=tokyonight&hide_border=true" alt="Mukil630's Git Streak" width="97%" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mukil630&theme=tokyonight&bg_color=081026&hide_border=true" alt="Mukil630's Commit Graph" width="97%" />
 </p>
 
 <p align="center">
