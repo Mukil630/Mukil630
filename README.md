@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=FFFFFF&center=true&vCenter=true&width=550&lines=Java+Developer;Full-Stack+Developer;AI+%26+Automation+Engineer;Freelancer" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=FFFFFF&center=true&vCenter=true&width=550&loop=false&lines=Java+Developer;Full-Stack+Developer;AI+%26+Automation+Engineer;Freelancer" alt="Typing SVG" />
 </p>
 
 <p align="center">
