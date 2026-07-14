@@ -1,7 +1,7 @@
 # <p align="center">💻 WELCOME TO MY WORKSPACE 💻</p>
 
 <p align="center">
-  <img src="assets/premium_desk_hero.jpg" alt="MUKILARASU S Workspace" width="100%" />
+  <img src="assets/modern_office_hero.jpg" alt="MUKILARASU S Workstation" width="100%" />
 </p>
 
 <p align="center">
