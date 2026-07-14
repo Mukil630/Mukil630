@@ -5,14 +5,14 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00f0ff&center=true&vCenter=true&width=550&lines=Java+Developer;Spring+Boot+Developer;AI+Automation+Engineer;Open+Source+Learner;Freelancer" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=39FF14&center=true&vCenter=true&width=550&lines=Java+Developer;Spring+Boot+Developer;AI+Automation+Engineer;Open+Source+Learner;Freelancer" alt="Typing SVG" />
 </p>
 
 <p align="center">
   <a href="https://linkedin.com/in/mukilarasu-s-333771302"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="https://leetcode.com/u/Mukil55"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/></a>
   <a href="mailto:mukilarasu55@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-  <img src="https://komarev.com/ghpvc/?username=Mukil630&color=00f0ff&style=for-the-badge&label=VISITORS" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=Mukil630&color=39FF14&style=for-the-badge&label=VISITORS" alt="Profile Views" />
 </p>
 
 ---
@@ -121,24 +121,24 @@ gantt
 ### 📊 Coding Analytics & Activity
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Mukil630&theme=tokyonight&margin-w=15&no-background=true&no-border=true" alt="Mukil630 Trophies" width="100%" />
+  <img src="https://github-profile-trophy.vercel.app/?username=Mukil630&theme=matrix&margin-w=15&no-background=true&no-border=true" alt="Mukil630 Trophies" width="100%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Mukil630&show_icons=true&theme=tokyonight&hide_border=true&align=center" alt="Mukil630's GitHub Stats" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mukil630&layout=compact&theme=tokyonight&hide_border=true&align=center" alt="Mukil630's Top Languages" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Mukil630&show_icons=true&bg_color=000000&title_color=39FF14&text_color=a2e897&icon_color=39FF14&hide_border=true&align=center" alt="Mukil630's GitHub Stats" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mukil630&layout=compact&bg_color=000000&title_color=39FF14&text_color=a2e897&icon_color=39FF14&hide_border=true&align=center" alt="Mukil630's Top Languages" width="48%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mukil630&theme=tokyonight&hide_border=true" alt="Mukil630's Git Streak" width="97%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mukil630&theme=matrix&hide_border=true" alt="Mukil630's Git Streak" width="97%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mukil630&theme=tokyonight&bg_color=081026&hide_border=true" alt="Mukil630's Commit Graph" width="97%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mukil630&theme=matrix&bg_color=000000&hide_border=true" alt="Mukil630's Commit Graph" width="97%" />
 </p>
 
 <p align="center">
-  <img src="https://leetcard.jacob.cai/api/Mukil55?theme=dark&font=Fira%20Code" alt="Mukil55's LeetCode Stats" width="70%" />
+  <img src="https://leetcard.jacob.cai/api/Mukil55?theme=dark&font=Fira%20Code&active_color=39FF14" alt="Mukil55's LeetCode Stats" width="70%" />
 </p>
 
 ---

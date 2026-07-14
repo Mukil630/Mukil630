@@ -2,27 +2,27 @@
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#040814" />
-      <stop offset="50%" stop-color="#081026" />
-      <stop offset="100%" stop-color="#03050c" />
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="50%" stop-color="#020804" />
+      <stop offset="100%" stop-color="#000000" />
     </linearGradient>
 
-    <!-- Cyan Glow Gradient -->
-    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" />
-      <stop offset="100%" stop-color="#0072ff" />
+    <!-- Neon Green Glow Gradient -->
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#39ff14" />
+      <stop offset="100%" stop-color="#00aa00" />
     </linearGradient>
 
     <!-- HUD Line Gradient -->
     <linearGradient id="hudLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.1" />
-      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.1" />
+      <stop offset="0%" stop-color="#39ff14" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#39ff14" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#39ff14" stop-opacity="0.1" />
     </linearGradient>
 
     <!-- Grid Pattern -->
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.07" />
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#39ff14" stroke-width="1" stroke-opacity="0.08" />
     </pattern>
 
     <!-- Neon Glow Filter -->
@@ -93,12 +93,12 @@
       font-family: 'Rajdhani', 'Segoe UI', sans-serif;
       font-weight: 600;
       letter-spacing: 3px;
-      fill: #00f0ff;
+      fill: #39ff14;
     }
     .hud-tag {
       font-family: 'Consolas', monospace;
       font-size: 13px;
-      fill: #8a99ad;
+      fill: #a2e897;
       letter-spacing: 1px;
     }
   </style>
@@ -110,22 +110,22 @@
   <!-- Holographic HUD Circle (Left Side) -->
   <g filter="url(#subtleGlow)">
     <!-- Outer Ring with Tech notches -->
-    <circle cx="120" cy="150" r="85" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.2" />
-    <circle cx="120" cy="150" r="80" class="spin-cw" fill="none" stroke="#00f0ff" stroke-width="1" stroke-dasharray="20 40 60 10 5 10" stroke-opacity="0.4" />
+    <circle cx="120" cy="150" r="85" fill="none" stroke="#39ff14" stroke-width="1.5" stroke-opacity="0.2" />
+    <circle cx="120" cy="150" r="80" class="spin-cw" fill="none" stroke="#39ff14" stroke-width="1" stroke-dasharray="20 40 60 10 5 10" stroke-opacity="0.4" />
     
     <!-- Middle Tech Ring -->
-    <circle cx="120" cy="150" r="65" class="spin-ccw" fill="none" stroke="#0072ff" stroke-width="2" stroke-dasharray="40 10 90 20" stroke-opacity="0.6" />
-    <circle cx="120" cy="150" r="60" fill="none" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.3" stroke-dasharray="4 4" />
+    <circle cx="120" cy="150" r="65" class="spin-ccw" fill="none" stroke="#00aa00" stroke-width="2" stroke-dasharray="40 10 90 20" stroke-opacity="0.6" />
+    <circle cx="120" cy="150" r="60" fill="none" stroke="#39ff14" stroke-width="0.5" stroke-opacity="0.3" stroke-dasharray="4 4" />
     
     <!-- Inner Crosshair and Target -->
-    <circle cx="120" cy="150" r="45" class="spin-cw" fill="none" stroke="#00f0ff" stroke-width="1" stroke-dasharray="8 12" stroke-opacity="0.5" />
-    <path d="M 120 95 L 120 105 M 120 195 L 120 205 M 65 150 L 75 150 M 165 150 L 175 150" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.7" />
-    <circle cx="120" cy="150" r="8" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="1.5" class="pulse-fast" />
-    <circle cx="120" cy="150" r="3" fill="#00f0ff" />
+    <circle cx="120" cy="150" r="45" class="spin-cw" fill="none" stroke="#39ff14" stroke-width="1" stroke-dasharray="8 12" stroke-opacity="0.5" />
+    <path d="M 120 95 L 120 105 M 120 195 L 120 205 M 65 150 L 75 150 M 165 150 L 175 150" stroke="#39ff14" stroke-width="1.5" stroke-opacity="0.7" />
+    <circle cx="120" cy="150" r="8" fill="#39ff14" fill-opacity="0.1" stroke="#39ff14" stroke-width="1.5" class="pulse-fast" />
+    <circle cx="120" cy="150" r="3" fill="#39ff14" />
   </g>
 
   <!-- Futuristic Corner Brackets (HUD Styling) -->
-  <g stroke="#00f0ff" stroke-width="2" fill="none" stroke-opacity="0.6" filter="url(#subtleGlow)">
+  <g stroke="#39ff14" stroke-width="2" fill="none" stroke-opacity="0.6" filter="url(#subtleGlow)">
     <!-- Top-Left -->
     <path d="M 15 40 L 15 15 L 40 15" />
     <!-- Top-Right -->
@@ -143,18 +143,18 @@
   <!-- Tech Stats Box (Right Side) -->
   <g transform="translate(620, 70)" filter="url(#subtleGlow)" class="pulse-slow">
     <!-- Outer Border -->
-    <rect width="145" height="155" rx="5" fill="#050e21" fill-opacity="0.6" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.3" />
+    <rect width="145" height="155" rx="5" fill="#020803" fill-opacity="0.7" stroke="#39ff14" stroke-width="1" stroke-opacity="0.3" />
     <!-- Header -->
-    <rect width="145" height="25" rx="2" fill="#00f0ff" fill-opacity="0.1" />
-    <text x="12" y="17" font-family="'Consolas', monospace" font-size="10" fill="#00f0ff" font-weight="bold">SYSTEM STATUS</text>
+    <rect width="145" height="25" rx="2" fill="#39ff14" fill-opacity="0.1" />
+    <text x="12" y="17" font-family="'Consolas', monospace" font-size="10" fill="#39ff14" font-weight="bold">SYSTEM STATUS</text>
     
     <!-- Telemetry Info -->
-    <text x="15" y="48" font-family="'Consolas', monospace" font-size="10" fill="#8a99ad">SYS.LOC // TN_IN</text>
-    <text x="15" y="68" font-family="'Consolas', monospace" font-size="10" fill="#8a99ad">CORE.LANG // JAVA</text>
-    <text x="15" y="88" font-family="'Consolas', monospace" font-size="10" fill="#8a99ad">AI.AGENT // ACTIVE</text>
-    <text x="15" y="108" font-family="'Consolas', monospace" font-size="10" fill="#8a99ad">DB.STAT // STABLE</text>
-    <text x="15" y="128" font-family="'Consolas', monospace" font-size="10" fill="#8a99ad">HOST.PLAT // RAILWAY</text>
-    <path d="M 12 140 L 133 140" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.3" />
+    <text x="15" y="48" font-family="'Consolas', monospace" font-size="10" fill="#a2e897">SYS.LOC // TN_IN</text>
+    <text x="15" y="68" font-family="'Consolas', monospace" font-size="10" fill="#a2e897">CORE.LANG // JAVA</text>
+    <text x="15" y="88" font-family="'Consolas', monospace" font-size="10" fill="#a2e897">AI.AGENT // ACTIVE</text>
+    <text x="15" y="108" font-family="'Consolas', monospace" font-size="10" fill="#a2e897">DB.STAT // STABLE</text>
+    <text x="15" y="128" font-family="'Consolas', monospace" font-size="10" fill="#a2e897">HOST.PLAT // RAILWAY</text>
+    <path d="M 12 140 L 133 140" stroke="#39ff14" stroke-width="0.5" stroke-opacity="0.3" />
     <circle cx="120" cy="140" r="3" fill="#39FF14" />
   </g>
 
@@ -167,12 +167,12 @@
     <text x="0" y="168" class="hud-sub" font-size="14" filter="url(#subtleGlow)">JAVA BACKEND DEVELOPER • AI ENGINEER</text>
 
     <!-- Inner divider line -->
-    <line x1="0" y1="188" x2="350" y2="188" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.5" filter="url(#subtleGlow)" />
+    <line x1="0" y1="188" x2="350" y2="188" stroke="#39ff14" stroke-width="1.5" stroke-opacity="0.5" filter="url(#subtleGlow)" />
     <!-- Tech dots on divider -->
-    <circle cx="0" cy="188" r="3.5" fill="#00f0ff" filter="url(#subtleGlow)" />
-    <circle cx="100" cy="188" r="2" fill="#0072ff" />
-    <circle cx="200" cy="188" r="2" fill="#0072ff" />
-    <circle cx="350" cy="188" r="3.5" fill="#00f0ff" filter="url(#subtleGlow)" />
+    <circle cx="0" cy="188" r="3.5" fill="#39ff14" filter="url(#subtleGlow)" />
+    <circle cx="100" cy="188" r="2" fill="#00aa00" />
+    <circle cx="200" cy="188" r="2" fill="#00aa00" />
+    <circle cx="350" cy="188" r="3.5" fill="#39ff14" filter="url(#subtleGlow)" />
 
     <!-- Core Tagline -->
     <text x="0" y="222" class="hud-tag">&gt; Building high-impact enterprise applications</text>
@@ -180,8 +180,8 @@
   </g>
 
   <!-- Interactive grid coordinates/hashes in corners -->
-  <text x="25" y="35" font-family="'Consolas', monospace" font-size="9" fill="#00f0ff" fill-opacity="0.3">GRID_ID: 630_AURA</text>
-  <text x="710" y="35" font-family="'Consolas', monospace" font-size="9" fill="#00f0ff" fill-opacity="0.3">LAT: 10.9602 N</text>
-  <text x="25" y="275" font-family="'Consolas', monospace" font-size="9" fill="#00f0ff" fill-opacity="0.3">SW_VER: 3.5_STABLE</text>
-  <text x="710" y="275" font-family="'Consolas', monospace" font-size="9" fill="#00f0ff" fill-opacity="0.3">LON: 78.0833 E</text>
+  <text x="25" y="35" font-family="'Consolas', monospace" font-size="9" fill="#39ff14" fill-opacity="0.3">GRID_ID: 630_AURA</text>
+  <text x="710" y="35" font-family="'Consolas', monospace" font-size="9" fill="#39ff14" fill-opacity="0.3">LAT: 10.9602 N</text>
+  <text x="25" y="275" font-family="'Consolas', monospace" font-size="9" fill="#39ff14" fill-opacity="0.3">SW_VER: 3.5_STABLE</text>
+  <text x="710" y="275" font-family="'Consolas', monospace" font-size="9" fill="#39ff14" fill-opacity="0.3">LON: 78.0833 E</text>
 </svg>
