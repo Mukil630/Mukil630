@@ -1,7 +1,7 @@
-# <p align="center">💎 WELCOME TO MY PORTFOLIO 💎</p>
+# <p align="center">🔮 WELCOME TO MY DEVELOPER SPELLBOOK 🔮</p>
 
 <p align="center">
-  <img src="assets/holographic_tech_card.jpg" alt="MUKILARASU S Developer Card" width="100%" />
+  <img src="assets/developer_spellbook_hero.jpg" alt="MUKILARASU S Spellbook" width="100%" />
 </p>
 
 <p align="center">
