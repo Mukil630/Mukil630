@@ -4,14 +4,10 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;family=Architects+Daughter&amp;family=Consolas&amp;display=swap');
 
-      /* General Keyframes */
-      @keyframes writeText {
-        from { stroke-dashoffset: 500; opacity: 0; }
-        to { stroke-dashoffset: 0; opacity: 1; }
-      }
+      /* General Keyframes - Safe Opacity-Only Transition */
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from { opacity: 0; }
+        to { opacity: 1; }
       }
       @keyframes drawLine {
         from { stroke-dashoffset: 1000; }
@@ -30,7 +26,7 @@
       /* Timing Classes for Sequential Text Writing */
       .write-title {
         font-family: 'Architects Daughter', 'Segoe UI', sans-serif;
-        font-size: 32px;
+        font-size: 30px;
         fill: #0d1b2a;
         opacity: 0;
         animation: fadeIn 1.5s ease-out 0.5s forwards;
@@ -40,28 +36,28 @@
         font-size: 22px;
         fill: #0077b6;
         opacity: 0;
-        animation: fadeIn 1.5s ease-out 1.8s forwards;
+        animation: fadeIn 1.5s ease-out 1.5s forwards;
       }
       .write-body-1 {
         font-family: 'Caveat', cursive;
-        font-size: 18px;
+        font-size: 19px;
         fill: #1b263b;
         opacity: 0;
-        animation: fadeIn 1.5s ease-out 3s forwards;
+        animation: fadeIn 1.5s ease-out 2.5s forwards;
       }
       .write-body-2 {
         font-family: 'Caveat', cursive;
-        font-size: 18px;
+        font-size: 19px;
         fill: #1b263b;
         opacity: 0;
-        animation: fadeIn 1.5s ease-out 4.2s forwards;
+        animation: fadeIn 1.5s ease-out 3.5s forwards;
       }
       .write-body-3 {
         font-family: 'Caveat', cursive;
-        font-size: 18px;
+        font-size: 19px;
         fill: #1b263b;
         opacity: 0;
-        animation: fadeIn 1.5s ease-out 5.4s forwards;
+        animation: fadeIn 1.5s ease-out 4.5s forwards;
       }
 
       /* Sticky notes and photo fades */
@@ -71,17 +67,17 @@
       }
       .fade-sticky {
         opacity: 0;
-        animation: fadeIn 2s ease-out 4s forwards;
+        animation: fadeIn 2s ease-out 3.5s forwards;
       }
       .draw-graph {
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
-        animation: drawLine 4s ease-in-out 5s forwards;
+        animation: drawLine 4s ease-in-out 4s forwards;
       }
       .draw-checklist {
         stroke-dasharray: 100;
         stroke-dashoffset: 100;
-        animation: drawLine 1.5s ease-in-out 6s forwards;
+        animation: drawLine 1.5s ease-in-out 5s forwards;
       }
       .spin-element {
         animation: spinGear 30s linear infinite;
@@ -198,7 +194,7 @@
   <!-- Summary text paragraphs (Handwritten simulation) -->
   <text x="100" y="142" class="write-body-1">"I'm passionate about building scalable backend</text>
   <text x="100" y="172" class="write-body-2">systems, AI workflow engines, and modern SaaS</text>
-  <text x="100" y="202" class="write-body-3">solutions that solve real-world problems."</text>
+  <text x="100" y="202" class="write-body-3">systems that solve real-world problems."</text>
 
   <!-- VSB Engineering College note -->
   <text x="100" y="380" class="write-body-2" font-size="15" fill="#52525b">🎓 VSB Eng. College | B.Tech IT | CGPA: 8.1</text>
@@ -209,7 +205,7 @@
   <text x="450" y="52" font-family="'Architects Daughter', sans-serif" font-size="18" font-weight="bold" fill="#0f172a">TECH STACK</text>
   
   <!-- Custom Drawn Tech Icons Grid -->
-  <g transform="translate(450, 70)" filter="url(#subtleGlow)">
+  <g transform="translate(450, 70)">
     <!-- Java -->
     <rect x="0" y="0" width="30" height="20" rx="3" fill="#ED8B00" fill-opacity="0.15" />
     <text x="5" y="14" font-family="'Consolas', monospace" font-size="11" fill="#ED8B00" font-weight="bold">JAVA</text>
@@ -289,7 +285,7 @@
   </g>
 
   <!-- Handwritten coding activity graph at the bottom -->
-  <g transform="translate(450, 375)" filter="url(#subtleGlow)">
+  <g transform="translate(450, 375)">
     <text x="0" y="-8" font-family="'Architects Daughter', sans-serif" font-size="11" fill="#64748b">COMMIT ACTIVITY (INK GRAPH)</text>
     <!-- Graph borders/axis -->
     <path d="M 0 35 L 260 35 M 0 35 L 0 0" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2 2" />
