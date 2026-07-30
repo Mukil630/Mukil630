@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <!-- Glowing Filters -->
+    <filter id="neonBlueGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="neonGreenGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes spinCW {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spinCCW {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.8; }
+    }
+    @keyframes drawPath {
+      from { stroke-dashoffset: 1000; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes flashCursor {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    .spin-cw {
+      animation: spinCW 25s linear infinite;
+      transform-origin: 90px 75px;
+    }
+    .spin-ccw {
+      animation: spinCCW 15s linear infinite;
+      transform-origin: 90px 75px;
+    }
+    .pulse-border {
+      animation: pulseGlow 4s ease-in-out infinite;
+    }
+    .draw-line {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: drawPath 4s ease-in-out infinite;
+    }
+    .blinking-cursor {
+      animation: flashCursor 1s infinite;
+      fill: #39ff14;
+    }
+  </style>
+
+  <!-- Background 3D Photorealistic Image (Relative Path to same folder) -->
+  <image href="cyberpunk_dashboard_hero.jpg" x="0" y="0" width="900" height="600" />
+
+  <!-- Animated Vector Overlays -->
+
+  <!-- 1. Circular HUD Ring over the Avatar Frame (Top Left) -->
+  <g filter="url(#neonBlueGlow)">
+    <circle cx="90" cy="75" r="54" fill="none" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="90" cy="75" r="50" class="spin-cw" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="25 45 10 30" />
+    <circle cx="90" cy="75" r="46" class="spin-ccw" fill="none" stroke="#bd93f9" stroke-width="1" stroke-dasharray="15 35 8 12" />
+  </g>
+
+  <!-- 2. Blinking Terminal Cursor in "about_me.txt" Widget -->
+  <rect x="250" y="222" width="6" height="11" class="blinking-cursor" />
+  <rect x="282" y="238" width="6" height="11" class="blinking-cursor" />
+
+  <!-- 3. Self-Drawing Glowing Green Graph in the "GITHUB STATS" Widget -->
+  <g transform="translate(485, 412)" filter="url(#neonGreenGlow)">
+    <!-- Animating Graph Overlay Path -->
+    <path d="M 10 60 Q 50 48 90 52 T 180 38 T 270 24 T 360 8" fill="none" stroke="#39ff14" stroke-width="2.5" class="draw-line" />
+    <circle cx="270" cy="24" r="3" fill="#39ff14" />
+    <circle cx="360" cy="8" r="3" fill="#39ff14" />
+  </g>
+
+  <!-- 4. Subtle Outer Border Glow Pulse -->
+  <rect x="2" y="2" width="896" height="596" rx="6" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.4" class="pulse-border" />
+</svg>

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#090D16" />
+    </linearGradient>
+
+    <!-- Cyan/Indigo Accent Gradient -->
+    <linearGradient id="cyanIndigo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="50%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.07" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulse {
+      0% { opacity: 0.4; }
+      50% { opacity: 0.9; }
+      100% { opacity: 0.4; }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(240px); }
+    }
+    .pulse-text { animation: pulse 3s infinite ease-in-out; }
+    .scan { animation: scanline 8s linear infinite; opacity: 0.15; }
+  </style>
+
+  <!-- Background -->
+  <rect width="900" height="240" fill="url(#bgGrad)" rx="12" />
+  <rect width="900" height="240" fill="url(#grid)" rx="12" />
+
+  <!-- Decorative Circuit Accents -->
+  <path d="M 30 40 L 120 40 L 150 70 L 300 70" fill="none" stroke="#06B6D4" stroke-width="2" stroke-opacity="0.4" />
+  <circle cx="30" cy="40" r="4" fill="#06B6D4" />
+  <circle cx="300" cy="70" r="4" fill="#3B82F6" />
+
+  <path d="M 870 200 L 780 200 L 750 170 L 600 170" fill="none" stroke="#6366F1" stroke-width="2" stroke-opacity="0.4" />
+  <circle cx="870" cy="200" r="4" fill="#6366F1" />
+  <circle cx="600" cy="170" r="4" fill="#3B82F6" />
+
+  <!-- Corner Brackets -->
+  <path d="M 20 50 L 20 20 L 50 20" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" />
+  <path d="M 880 50 L 880 20 L 850 20" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" />
+  <path d="M 20 190 L 20 220 L 50 220" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" />
+  <path d="M 880 190 L 880 220 L 850 220" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Main Name Title -->
+  <text x="450" y="95" text-anchor="middle" font-family="'Segoe UI', 'Fira Code', Inter, sans-serif" font-weight="900" font-size="42" fill="url(#cyanIndigo)" filter="url(#glow)" letter-spacing="4">
+    MUKILARASU S
+  </text>
+
+  <!-- Subtitle / Tagline -->
+  <text x="450" y="135" text-anchor="middle" font-family="'Fira Code', Monaco, Consolas, monospace" font-weight="600" font-size="16" fill="#F8FAFC" letter-spacing="2">
+    JAVA BACKEND DEVELOPER • AI &amp; AUTOMATION ENGINEER
+  </text>
+
+  <!-- Tech Pills / Status Bar -->
+  <g transform="translate(180, 160)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="160" height="32" rx="16" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5" />
+    <circle cx="18" cy="16" r="5" fill="#10B981" />
+    <text x="32" y="21" font-family="'Fira Code', monospace" font-size="12" font-weight="700" fill="#38BDF8">SPRING BOOT</text>
+
+    <!-- Pill 2 -->
+    <rect x="180" y="0" width="180" height="32" rx="16" fill="#1E293B" stroke="#3B82F6" stroke-width="1.5" />
+    <circle cx="198" cy="16" r="5" fill="#3B82F6" />
+    <text x="212" y="21" font-family="'Fira Code', monospace" font-size="12" font-weight="700" fill="#60A5FA">LLM &amp; RAG AGENTS</text>
+
+    <!-- Pill 3 -->
+    <rect x="380" y="0" width="160" height="32" rx="16" fill="#1E293B" stroke="#6366F1" stroke-width="1.5" />
+    <circle cx="398" cy="16" r="5" fill="#818CF8" />
+    <text x="412" y="21" font-family="'Fira Code', monospace" font-size="12" font-weight="700" fill="#A5B4FC">FULL-STACK SaaS</text>
+  </g>
+
+  <!-- Live Pulse Indicator -->
+  <g transform="translate(450, 212)">
+    <circle cx="-100" cy="0" r="4" fill="#10B981" class="pulse-text" />
+    <text x="-90" y="4" font-family="'Fira Code', monospace" font-size="11" fill="#94A3B8">SYSTEM STATUS: ACTIVE &amp; SCALING</text>
+  </g>
+</svg>

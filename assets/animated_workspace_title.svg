@@ -1,0 +1,73 @@
+<svg width="100%" height="70" viewBox="0 0 900 70" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes glitchX1 {
+      0%, 100% { transform: translateX(0); }
+      10% { transform: translateX(-2px); }
+      20% { transform: translateX(2px); }
+      30% { transform: translateX(-1px); }
+      40% { transform: translateX(1px); }
+      50% { transform: translateX(-3px); }
+      60% { transform: translateX(3px); }
+      70% { transform: translateX(0); }
+    }
+    @keyframes glitchX2 {
+      0%, 100% { transform: translateX(0); }
+      15% { transform: translateX(2px); }
+      25% { transform: translateX(-2px); }
+      35% { transform: translateX(3px); }
+      45% { transform: translateX(-1px); }
+      55% { transform: translateX(2px); }
+      65% { transform: translateX(-3px); }
+      75% { transform: translateX(0); }
+    }
+    @keyframes scanline {
+      0% { y: 0; }
+      100% { y: 70; }
+    }
+    @keyframes pulseOpacity {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 0.5; }
+    }
+    .main-title {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- Cyan Glitch Shadow -->
+  <text x="452" y="45" class="main-title" fill="#00FFFF" opacity="0.4" style="animation: glitchX1 3s infinite linear;">
+    ⚡ WELCOME TO MY CYBERNETIC WORKSPACE ⚡
+  </text>
+
+  <!-- Pink/Red Glitch Shadow -->
+  <text x="448" y="43" class="main-title" fill="#FF007F" opacity="0.4" style="animation: glitchX2 4s infinite linear;">
+    ⚡ WELCOME TO MY CYBERNETIC WORKSPACE ⚡
+  </text>
+
+  <!-- Primary Neon Green Text -->
+  <text x="450" y="44" class="main-title" fill="#39FF14" filter="url(#glow)">
+    ⚡ WELCOME TO MY CYBERNETIC WORKSPACE ⚡
+    <animate attributeName="opacity" values="1;1;0.8;1;0.9;1" dur="2s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Flashing Cursor -->
+  <rect x="790" y="24" width="10" height="24" fill="#39FF14">
+    <animate attributeName="opacity" values="1;1;0;0" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Scanline sweep -->
+  <rect x="0" y="0" width="900" height="3" fill="#39FF14" opacity="0.12" style="animation: scanline 4s infinite linear;"/>
+</svg>

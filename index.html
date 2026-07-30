@@ -1,793 +1,1060 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mukilarasu S - Full-Stack Developer & AI Systems Engineer Portfolio. B.Tech IT student at VSB Engineering College, Infosys Certified Java Developer, AI SaaS & Automation Engineer.">
-    <title>MUKILARASU S | Full-Stack Developer & AI Engineer Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUKILARASU S | Full-Stack Developer & AI Systems Engineer</title>
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Marked Markdown Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-    <!-- Google Fonts: Inter & Plus Jakarta Sans & Fira Code -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Main Style Sheet -->
-    <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg-dark: #080C14;
+      --card-bg: rgba(15, 23, 42, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-border-hover: rgba(56, 189, 248, 0.4);
+      --accent-blue: #0EA5E9;
+      --accent-indigo: #6366F1;
+      --accent-emerald: #10B981;
+      --accent-purple: #8B5CF6;
+      --text-primary: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'Fira Code', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Subtle Ambient Grid & Mesh Gradient */
+    .ambient-glow {
+      position: fixed;
+      top: -20%; left: -10%;
+      width: 60vw; height: 60vw;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, rgba(99, 102, 241, 0.03) 50%, transparent 70%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .ambient-glow-2 {
+      position: fixed;
+      bottom: -20%; right: -10%;
+      width: 60vw; height: 60vw;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.06) 0%, rgba(16, 185, 129, 0.03) 50%, transparent 70%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Header Navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 12, 20, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 14px 0;
+    }
+
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #FFF;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .brand-logo img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid var(--accent-blue);
+      object-fit: cover;
+    }
+
+    .brand-logo span {
+      color: var(--accent-blue);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--accent-blue);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo));
+      color: #FFF;
+      box-shadow: 0 4px 14px rgba(14, 165, 233, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+    }
+
+    .btn-outline {
+      background: rgba(15, 23, 42, 0.6);
+      border-color: var(--card-border);
+      color: var(--text-primary);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
+      background: rgba(14, 165, 233, 0.08);
+    }
+
+    .btn-whatsapp {
+      background: #10B981;
+      color: #FFF;
+    }
+
+    .btn-whatsapp:hover {
+      background: #059669;
+      transform: translateY(-2px);
+    }
+
+    /* Container Main */
+    .main-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* Hero Section */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .profile-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 24px;
+      backdrop-filter: blur(12px);
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .profile-img-wrap {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 20px auto;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo));
+    }
+
+    .profile-img-wrap img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--accent-emerald);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-emerald);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent-emerald);
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-heading);
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #FFF 30%, var(--accent-blue) 70%, var(--accent-indigo));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-role {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--accent-blue);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-bio {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 28px;
+      max-width: 720px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* Executive AI Assistant Section */
+    .ai-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 60px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .ai-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .ai-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .ai-title i {
+      color: var(--accent-blue);
+    }
+
+    .ai-badge {
+      background: rgba(14, 165, 233, 0.1);
+      border: 1px solid rgba(14, 165, 233, 0.3);
+      color: var(--accent-blue);
+      font-size: 12px;
+      font-family: var(--font-mono);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .ai-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .ai-chip {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid var(--card-border);
+      color: var(--text-secondary);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12.5px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .ai-chip:hover {
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
+      background: rgba(14, 165, 233, 0.08);
+    }
+
+    .ai-chat-stream {
+      background: rgba(8, 12, 20, 0.8);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      min-height: 180px;
+      max-height: 320px;
+      overflow-y: auto;
+      margin-bottom: 16px;
+    }
+
+    .chat-bubble {
+      margin-bottom: 14px;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .chat-bubble.bot {
+      color: var(--text-primary);
+      background: rgba(30, 41, 59, 0.5);
+      border-left: 3px solid var(--accent-blue);
+      padding: 12px 16px;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .chat-bubble.user {
+      color: var(--accent-blue);
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .ai-input-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .ai-input {
+      flex: 1;
+      background: rgba(8, 12, 20, 0.8);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 12px 18px;
+      color: #FFF;
+      font-family: var(--font-body);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .ai-input:focus {
+      border-color: var(--accent-blue);
+    }
+
+    /* Section Titles */
+    .section-title-wrap {
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title i {
+      color: var(--accent-blue);
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--card-border-hover);
+      box-shadow: 0 16px 36px rgba(14, 165, 233, 0.15);
+    }
+
+    .project-thumb {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .project-body {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent-blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .project-card h3 {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #FFF;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .tech-tag {
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-secondary);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-family: var(--font-mono);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .skill-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .skill-card h4 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--accent-blue);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-pill {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid var(--card-border);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    /* Experience & Certifications Grid */
+    .exp-cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .exp-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 24px;
+      border-left: 2px solid rgba(14, 165, 233, 0.3);
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-blue);
+      box-shadow: 0 0 10px var(--accent-blue);
+    }
+
+    .timeline-role {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFF;
+    }
+
+    .timeline-org {
+      color: var(--accent-blue);
+      font-size: 13.5px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .timeline-desc {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--card-border);
+      padding: 30px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13.5px;
+    }
+
+    .footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+  </style>
 </head>
-<body class="light-theme">
+<body>
 
-    <!-- Ambient Grid & Soft Radial Glows -->
-    <div class="ambient-glow glow-top-left"></div>
-    <div class="ambient-glow glow-bottom-right"></div>
-    <div class="grid-background"></div>
+  <!-- Ambient Glows -->
+  <div class="ambient-glow"></div>
+  <div class="ambient-glow-2"></div>
 
-    <!-- Navigation Header -->
-    <header class="header" id="header">
-        <div class="container nav-wrapper">
-            <a href="#hero" class="logo-wrap">
-                <img src="profile.jpg" alt="Mukilarasu S" class="nav-profile-thumb">
-                <div class="logo-text">MUKILARASU <span>S</span></div>
-            </a>
-            
-            <ul class="nav-items" id="navItems">
-                <li><a href="#hero" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#internships">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#freelance">Freelancing</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <img src="profile.jpg" alt="Mukilarasu S">
+        MUKILARASU <span>S</span>
+      </a>
 
-            <div class="nav-actions">
-                <a href="MUKILARASU_S_PERFECT_RESUME.pdf" download="MUKILARASU_S_PERFECT_RESUME.pdf" class="btn btn-outline btn-sm">
-                    <i class="fa-solid fa-file-arrow-down"></i> Resume PDF
-                </a>
-                <a href="https://wa.me/919080030538?text=Hi%20Mukilarasu!%20I%20saw%20your%20portfolio%20and%20wanted%20to%20connect." target="_blank" class="btn btn-blue btn-sm btn-nav-cta">
-                    <i class="fa-brands fa-whatsapp"></i> Chat Live
-                </a>
-                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Overview</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#ai-assistant">AI Assistant</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+      </ul>
 
-    <!-- Main Content Stream -->
-    <main>
-        
-        <!-- Hero Section with Profile Picture Column & AI Console Card -->
-        <section class="hero" id="hero">
-            <div class="container">
-                
-                <div class="hero-top-layout">
-                    <!-- Profile Avatar Container -->
-                    <div class="hero-avatar-col">
-                        <div class="profile-avatar-frame">
-                            <img src="profile.jpg" alt="Mukilarasu S" class="hero-profile-img">
-                            <span class="avatar-status-badge">
-                                <span class="status-dot"></span> Available
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Text Details Column -->
-                    <div class="hero-text-col">
-                        <div class="hero-badge-wrap">
-                            <span class="status-badge">
-                                <span class="status-dot"></span> Open for Full-Stack & AI Engineering Roles (Class of 2027)
-                            </span>
-                        </div>
-
-                        <h1 class="hero-title">
-                            Hi, I'm <span class="text-gradient">Mukilarasu S</span>
-                        </h1>
-                        
-                        <p class="hero-subtitle-role">
-                            Full-Stack Developer <span class="role-divider">|</span> AI & Automation Engineer
-                        </p>
-
-                        <p class="hero-desc">
-                            Final-year B.Tech Information Technology student (CGPA: <b>7.9 / 10</b>) at VSB Engineering College. Creator of production-ready live platforms including <b>Botify SaaS</b>, <b>The Dream Elevate</b>, <b>The Saivi Collection</b>, <b>Jarvis Prime AI Agent</b>, and <b>VIZRO Vertex</b>.
-                        </p>
-
-                        <!-- Action CTA Buttons -->
-                        <div class="hero-ctas">
-                            <a href="#projects" class="btn btn-blue btn-lg">
-                                <i class="fa-solid fa-rocket"></i> View Live Projects
-                            </a>
-                            <a href="https://vizro.vercel.app/" target="_blank" class="btn btn-purple btn-lg">
-                                <i class="fa-solid fa-globe"></i> VIZRO Freelancing Page
-                            </a>
-                            <a href="MUKILARASU_S_PERFECT_RESUME.pdf" download="MUKILARASU_S_PERFECT_RESUME.pdf" class="btn btn-outline btn-lg">
-                                <i class="fa-solid fa-download"></i> Resume PDF
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quick Prompt Chips for Candidate AI Bot -->
-                <div class="chip-container">
-                    <span class="chip-label">Quick Prompts for Mukil's AI Bot:</span>
-                    <button class="hero-chip" onclick="askAiConsole('Tell me about Botify WhatsApp SaaS platform')">⚡ Botify SaaS (Railway)</button>
-                    <button class="hero-chip" onclick="askAiConsole('Tell me about The Dream Elevate bakery store website')">🎂 The Dream Elevate</button>
-                    <button class="hero-chip" onclick="askAiConsole('Tell me about The Saivi Collection boutique e-commerce')">👗 The Saivi Collection</button>
-                    <button class="hero-chip" onclick="askAiConsole('Tell me about VIZRO Vertex freelancing platform')">🌐 VIZRO Vertex</button>
-                    <button class="hero-chip" onclick="askAiConsole('Tell me about Jarvis Prime AI Agent')">🎙️ Jarvis Prime AI Agent</button>
-                </div>
-
-                <!-- ── CANDIDATE AI ASSISTANT CHATBOX CONSOLE CARD ── -->
-                <div class="chatbox-card" id="ai-assistant">
-                    <div class="chatbox-header">
-                        <div class="chatbox-header-title">
-                            <div class="bot-avatar-icon"><i class="fa-solid fa-robot"></i></div>
-                            <div class="chat-status-dot"></div>
-                            <span>Mukil's AI Portfolio Assistant</span>
-                        </div>
-                        <span class="chat-engine-tag">⚡ Live Candidate Q&A Engine</span>
-                    </div>
-
-                    <div class="chatbox-body" id="chatStream">
-                        <!-- Initial Message -->
-                        <div class="chat-msg bot">
-                            <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
-                            <div class="chat-bubble">
-                                Welcome to Mukilarasu's Portfolio! 👋<br><br>
-                                I am Mukil's AI Assistant. Ask me anything about Mukil's live client deployments like <b>Botify WhatsApp SaaS</b>, <b>The Dream Elevate</b>, <b>The Saivi Collection</b>, <b>VIZRO Vertex</b>, <b>Jarvis Prime</b>, <b>Infosys Java certification</b>, or <b>Hero MotoCorp / IBM internships</b>!
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="chatbox-footer">
-                        <input type="text" class="chat-input" id="chatInputText" placeholder="Ask about Botify, Dream Elevate, Saivi Collection, VIZRO Vertex, Jarvis Prime..." onkeydown="if(event.key==='Enter') sendUserChatMessage()">
-                        <button class="btn btn-blue btn-sm" onclick="sendUserChatMessage()">
-                            <span>Ask</span> <i class="fa-solid fa-paper-plane"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Metrics Counter Bar -->
-                <div class="hero-metrics">
-                    <div class="metric-item">
-                        <div class="metric-num" data-target="7.9">7.9</div>
-                        <div class="metric-lbl">CGPA (B.Tech IT)</div>
-                        <div class="metric-sub">VSB Engineering College</div>
-                    </div>
-                    <div class="metric-item">
-                        <div class="metric-num" data-target="6">6</div>
-                        <div class="metric-lbl">Production Builds</div>
-                        <div class="metric-sub">Live SaaS & Client Apps</div>
-                    </div>
-                    <div class="metric-item">
-                        <div class="metric-num" data-target="5">5</div>
-                        <div class="metric-lbl">Verified Certifications</div>
-                        <div class="metric-sub">Infosys, NPTEL & Udemy</div>
-                    </div>
-                    <div class="metric-item">
-                        <div class="metric-num" data-target="2">2</div>
-                        <div class="metric-lbl">Industry Internships</div>
-                        <div class="metric-sub">Hero MotoCorp & IBM</div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- About Candidate Summary Section -->
-        <section id="about" class="section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <div class="badge-pill badge-blue">Candidate Profile</div>
-                    <h2 class="section-title">About Mukilarasu S</h2>
-                    <p class="section-desc">Full-Stack Engineer & AI Developer passionate about building high-performance, real-world software systems.</p>
-                </div>
-
-                <div class="about-grid">
-                    <!-- Photo Card Column -->
-                    <div class="about-photo-card">
-                        <div class="about-img-frame">
-                            <img src="profile.jpg" alt="Mukilarasu S" class="about-profile-img">
-                        </div>
-                        <h4 class="about-name">Mukilarasu S</h4>
-                        <p class="about-role">Full-Stack Developer | AI Engineer</p>
-                    </div>
-
-                    <!-- Description Column -->
-                    <div class="about-card-main">
-                        <h3><i class="fa-solid fa-user-gear"></i> Professional Background</h3>
-                        <p class="about-summary-text">
-                            Final-year <b>B.Tech Information Technology</b> student (CGPA: <b>7.9 / 10</b>) at VSB Engineering College with hands-on experience in AI, automation, and full-stack development. Built production-ready freelance applications including AI-powered SaaS platforms, desktop applications, and automation tools. Creator of live platforms including <b>Botify WhatsApp SaaS</b>, <b>The Dream Elevate</b>, <b>The Saivi Collection</b>, and founder of <b>VIZRO Vertex</b>.
-                        </p>
-                        
-                        <div class="quick-facts-row">
-                            <div class="fact-pill">
-                                <i class="fa-solid fa-graduation-cap"></i>
-                                <span>VSB Engineering College, Karur (2023 – 2027)</span>
-                            </div>
-                            <div class="fact-pill">
-                                <i class="fa-solid fa-award"></i>
-                                <span>Infosys Certified Java Programmer</span>
-                            </div>
-                            <div class="fact-pill">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <span>Karur, Tamil Nadu</span>
-                            </div>
-                        </div>
-
-                        <div class="social-links-bar">
-                            <a href="https://github.com/Mukil630" target="_blank" class="social-link-btn">
-                                <i class="fa-brands fa-github"></i> GitHub (Mukil630)
-                            </a>
-                            <a href="https://linkedin.com/in/mukilarasu-s-333771302" target="_blank" class="social-link-btn">
-                                <i class="fa-brands fa-linkedin"></i> LinkedIn
-                            </a>
-                            <a href="https://leetcode.com/u/Mukil55" target="_blank" class="social-link-btn">
-                                <i class="fa-solid fa-code"></i> LeetCode (Mukil55)
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Freelancing Agency Showcase Section -->
-        <section id="freelance" class="section-padding bg-alt">
-            <div class="container">
-                <div class="freelance-banner-card">
-                    <div class="freelance-logo-wrap">
-                        <img src="vizro_logo.png" alt="VIZRO Vertex Logo" class="vizro-logo-img">
-                    </div>
-                    <div class="freelance-badge">🚀 Freelancing & Custom Engineering Suite</div>
-                    <h2 class="freelance-title">VIZRO VERTEX — AI Engineering & Web Suite</h2>
-                    <p class="freelance-desc">
-                        Mukilarasu's personal freelancing platform providing custom AI agent integrations, high-converting e-commerce web applications, and enterprise automation tools for client businesses.
-                    </p>
-                    <div class="freelance-ctas">
-                        <a href="https://vizro.vercel.app/" target="_blank" class="btn btn-purple btn-lg">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit VIZRO Vertex Platform (vizro.vercel.app)
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Internships Section -->
-        <section id="internships" class="section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <div class="badge-pill badge-purple">Industry Exposure</div>
-                    <h2 class="section-title">Internship Experience</h2>
-                    <p class="section-desc">Practical research and engineering exposure gained across automotive R&D and AI automation programs.</p>
-                </div>
-
-                <div class="internships-grid">
-                    <!-- Internship 1: Hero MotoCorp -->
-                    <div class="internship-card">
-                        <div class="internship-badge-icon">
-                            <i class="fa-solid fa-gears"></i>
-                        </div>
-                        <div class="internship-content">
-                            <div class="internship-header">
-                                <h3>Hero MotoCorp Ltd. — Research & Development Intern</h3>
-                                <span class="internship-period">1 Month R&D Intensive</span>
-                            </div>
-                            <p class="company-sub"><i class="fa-solid fa-building"></i> Hero MotoCorp Ltd. R&D Division</p>
-                            <p class="internship-desc">
-                                Worked in the R&D division and gained practical exposure to automotive research, product development, and engineering workflows.
-                            </p>
-                            <div class="internship-tags">
-                                <span class="tag">R&D Workflows</span>
-                                <span class="tag">Product Development</span>
-                                <span class="tag">Automotive Engineering</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Internship 2: IBM -->
-                    <div class="internship-card">
-                        <div class="internship-badge-icon ibm-blue">
-                            <i class="fa-solid fa-brain"></i>
-                        </div>
-                        <div class="internship-content">
-                            <div class="internship-header">
-                                <h3>IBM — AI & Automation Weekend Internship</h3>
-                                <span class="internship-period">2026 Virtual Internship</span>
-                            </div>
-                            <p class="company-sub"><i class="fa-solid fa-laptop-code"></i> IBM Virtual Internship Program</p>
-                            <p class="internship-desc">
-                                Completed virtual internship covering AI fundamentals, automation concepts, and real-world applications of intelligent systems.
-                            </p>
-                            <div class="internship-tags">
-                                <span class="tag">AI Fundamentals</span>
-                                <span class="tag">Process Automation</span>
-                                <span class="tag">Intelligent Systems</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Projects Section with Real Screenshots & Direct Links -->
-        <section id="projects" class="section-padding bg-alt">
-            <div class="container">
-                <div class="section-header">
-                    <div class="badge-pill badge-emerald">Real-World Builds</div>
-                    <h2 class="section-title">Featured Production & Client Projects</h2>
-                    <p class="section-desc">Production-grade SaaS platforms, live client e-commerce websites, and voice/desktop automation tools built by Mukilarasu S.</p>
-                </div>
-
-                <div class="projects-filter">
-                    <button class="filter-btn active" onclick="filterProjects('all')">All Projects (6)</button>
-                    <button class="filter-btn" onclick="filterProjects('client')">Client E-Commerce</button>
-                    <button class="filter-btn" onclick="filterProjects('saas')">SaaS & AI Bots</button>
-                    <button class="filter-btn" onclick="filterProjects('desktop')">Desktop & Systems</button>
-                </div>
-
-                <div class="projects-grid" id="projectsGrid">
-                    
-                    <!-- Project 1: Botify SaaS -->
-                    <div class="project-card" data-cat="saas ai">
-                        <div class="project-img-banner">
-                            <img src="botify_preview.jpg" alt="Botify Multi-Tenant WhatsApp Bot SaaS">
-                            <span class="project-type-badge live-railway"><i class="fa-solid fa-circle-check"></i> Live Railway Deployment</span>
-                        </div>
-                        <div class="project-card-body">
-                            <h3 class="project-title">Botify — Multi-Tenant WhatsApp Bot SaaS</h3>
-                            <p class="project-desc">
-                                Production-grade multi-tenant WhatsApp Bot SaaS platform enabling retail businesses to deploy AI agents with Groq LLM integration, appointment booking, and instant QR sessions.
-                            </p>
-                            <div class="project-tech-stack">
-                                <span class="ptag">Multi-Tenant SaaS</span>
-                                <span class="ptag">WhatsApp Bot Engine</span>
-                                <span class="ptag">Groq LLM API</span>
-                            </div>
-                        </div>
-                        <div class="project-card-footer">
-                            <button class="btn btn-outline btn-sm" onclick="openProjectModal('botify')">
-                                <i class="fa-solid fa-circle-info"></i> Inspect
-                            </button>
-                            <a href="https://web-production-c6fdbb.up.railway.app/login" target="_blank" class="btn btn-blue btn-sm">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live App →
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: The Dream Elevate -->
-                    <div class="project-card" data-cat="client">
-                        <div class="project-img-banner">
-                            <img src="dreamelevate_preview.jpg" alt="The Dream Elevate E-Commerce Platform">
-                            <span class="project-type-badge live-client"><i class="fa-solid fa-circle-check"></i> Live Client Website</span>
-                        </div>
-                        <div class="project-card-body">
-                            <h3 class="project-title">The Dream Elevate</h3>
-                            <p class="project-desc">
-                                Premium baking tools, cake decorating equipment, & professional bakery supplies e-commerce platform with catalog and WhatsApp ordering.
-                            </p>
-                            <div class="project-tech-stack">
-                                <span class="ptag">Bakery Supplies</span>
-                                <span class="ptag">Baking Tools Store</span>
-                                <span class="ptag">E-Commerce Web</span>
-                            </div>
-                        </div>
-                        <div class="project-card-footer">
-                            <button class="btn btn-outline btn-sm" onclick="openProjectModal('dreamelevate')">
-                                <i class="fa-solid fa-circle-info"></i> Inspect
-                            </button>
-                            <a href="https://dream-elevate.vercel.app/" target="_blank" class="btn btn-blue btn-sm">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live Site →
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: The Saivi Collection -->
-                    <div class="project-card" data-cat="client">
-                        <div class="project-img-banner">
-                            <img src="saivi_preview.jpg" alt="The Saivi Collection Boutique Platform">
-                            <span class="project-type-badge live-client"><i class="fa-solid fa-circle-check"></i> Live Client Website</span>
-                        </div>
-                        <div class="project-card-body">
-                            <h3 class="project-title">The Saivi Collection</h3>
-                            <p class="project-desc">
-                                High-fashion boutique e-commerce platform featuring dynamic dress catalog, UPI payment QR, and WhatsApp orders.
-                            </p>
-                            <div class="project-tech-stack">
-                                <span class="ptag">Boutique E-Commerce</span>
-                                <span class="ptag">UPI Payment QR</span>
-                                <span class="ptag">WhatsApp Orders</span>
-                            </div>
-                        </div>
-                        <div class="project-card-footer">
-                            <button class="btn btn-outline btn-sm" onclick="openProjectModal('saivi')">
-                                <i class="fa-solid fa-circle-info"></i> Inspect
-                            </button>
-                            <a href="https://saivi-collection.vercel.app/" target="_blank" class="btn btn-blue btn-sm">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live Site →
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 4: Jarvis Prime AI Agent -->
-                    <div class="project-card" data-cat="ai desktop">
-                        <div class="project-img-banner">
-                            <img src="jarvis_preview.jpg" alt="Jarvis Prime AI Agent Software">
-                            <span class="project-type-badge production"><i class="fa-solid fa-circle-check"></i> Production Build</span>
-                        </div>
-                        <div class="project-card-body">
-                            <h3 class="project-title">Jarvis Prime AI Agent</h3>
-                            <p class="project-desc">
-                                Voice-controlled autonomous AI desktop assistant with speech recognition, system command execution, ReAct cognitive reasoning loop, and web search telemetry.
-                            </p>
-                            <div class="project-tech-stack">
-                                <span class="ptag">Python</span>
-                                <span class="ptag">Speech Synthesis</span>
-                                <span class="ptag">ReAct AI Agent</span>
-                            </div>
-                        </div>
-                        <div class="project-card-footer">
-                            <button class="btn btn-outline btn-sm" onclick="openProjectModal('jarvis')">
-                                <i class="fa-solid fa-circle-info"></i> Inspect
-                            </button>
-                            <a href="https://github.com/Mukil630" target="_blank" class="btn btn-blue btn-sm">
-                                <i class="fa-brands fa-github"></i> GitHub Code →
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 5: SGC Billing Desktop App -->
-                    <div class="project-card" data-cat="desktop">
-                        <div class="project-header-row" style="padding: 24px 24px 0 24px;">
-                            <div class="project-icon-box electron"><i class="fa-solid fa-desktop"></i></div>
-                            <span class="project-type-badge freelance"><i class="fa-solid fa-circle-check"></i> Freelance Desktop App</span>
-                        </div>
-                        <div class="project-card-body">
-                            <h3 class="project-title">SGC Billing – Desktop Invoice App</h3>
-                            <p class="project-desc">
-                                Desktop invoice generation software built with Electron and React featuring Puppeteer PDF rendering and Google Drive OAuth backup.
-                            </p>
-                            <div class="project-tech-stack">
-                                <span class="ptag">Electron</span>
-                                <span class="ptag">React</span>
-                                <span class="ptag">Puppeteer PDF</span>
-                            </div>
-                        </div>
-                        <div class="project-card-footer">
-                            <button class="btn btn-outline btn-sm" onclick="openProjectModal('sgc')">
-                                <i class="fa-solid fa-circle-info"></i> Inspect
-                            </button>
-                            <a href="https://github.com/Mukil630" target="_blank" class="btn btn-blue btn-sm">
-                                <i class="fa-brands fa-github"></i> GitHub Code →
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 6: AI Billing Telegram Bot -->
-                    <div class="project-card" data-cat="ai saas">
-                        <div class="project-header-row" style="padding: 24px 24px 0 24px;">
-                            <div class="project-icon-box telegram"><i class="fa-solid fa-paper-plane"></i></div>
-                            <span class="project-type-badge freelance"><i class="fa-solid fa-circle-check"></i> Groq & Telegram Bot</span>
-                        </div>
-                        <div class="project-card-body">
-                            <h3 class="project-title">AI Billing Automation Bot</h3>
-                            <p class="project-desc">
-                                AI-powered handwritten invoice parser built with Groq Vision API and Telegram Bot for instant PDF receipt generation and Cloudinary hosting.
-                            </p>
-                            <div class="project-tech-stack">
-                                <span class="ptag">Groq Vision API</span>
-                                <span class="ptag">Telegram Bot API</span>
-                                <span class="ptag">Cloudinary</span>
-                            </div>
-                        </div>
-                        <div class="project-card-footer">
-                            <button class="btn btn-outline btn-sm" onclick="openProjectModal('telegram-ocr')">
-                                <i class="fa-solid fa-circle-info"></i> Inspect
-                            </button>
-                            <a href="https://github.com/Mukil630" target="_blank" class="btn btn-blue btn-sm">
-                                <i class="fa-brands fa-github"></i> GitHub Code →
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Skills & Competencies -->
-        <section id="skills" class="section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <div class="badge-pill badge-blue">Skill Matrix</div>
-                    <h2 class="section-title">Technical Skills & Competencies</h2>
-                    <p class="section-desc">Languages, frameworks, databases, and deployment platforms used across my software builds.</p>
-                </div>
-
-                <div class="skills-matrix-grid">
-                    
-                    <div class="skill-category-card">
-                        <div class="skill-icon-header"><i class="fa-solid fa-code"></i></div>
-                        <h3>Programming Languages</h3>
-                        <div class="skill-badges-wrapper">
-                            <span class="sbadge highlight"><i class="fa-brands fa-java"></i> Java (Infosys Certified)</span>
-                            <span class="sbadge"><i class="fa-brands fa-python"></i> Python</span>
-                            <span class="sbadge"><i class="fa-brands fa-js"></i> JavaScript</span>
-                            <span class="sbadge"><i class="fa-solid fa-database"></i> SQL</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category-card">
-                        <div class="skill-icon-header"><i class="fa-solid fa-layer-group"></i></div>
-                        <h3>Frameworks & Libraries</h3>
-                        <div class="skill-badges-wrapper">
-                            <span class="sbadge"><i class="fa-brands fa-react"></i> React</span>
-                            <span class="sbadge"><i class="fa-brands fa-node-js"></i> Node.js</span>
-                            <span class="sbadge"><i class="fa-solid fa-desktop"></i> Electron</span>
-                            <span class="sbadge"><i class="fa-solid fa-flask"></i> Flask</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category-card">
-                        <div class="skill-icon-header"><i class="fa-solid fa-database"></i></div>
-                        <h3>Databases</h3>
-                        <div class="skill-badges-wrapper">
-                            <span class="sbadge"><i class="fa-solid fa-server"></i> PostgreSQL</span>
-                            <span class="sbadge"><i class="fa-solid fa-database"></i> MySQL</span>
-                            <span class="sbadge"><i class="fa-solid fa-box"></i> SQLite</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category-card">
-                        <div class="skill-icon-header"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                        <h3>Tools & Infrastructure</h3>
-                        <div class="skill-badges-wrapper">
-                            <span class="sbadge"><i class="fa-brands fa-git-alt"></i> Git</span>
-                            <span class="sbadge"><i class="fa-brands fa-github"></i> GitHub</span>
-                            <span class="sbadge"><i class="fa-solid fa-train"></i> Railway</span>
-                            <span class="sbadge"><i class="fa-solid fa-paper-plane"></i> Postman API</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications & Credentials -->
-        <section id="certifications" class="section-padding bg-alt">
-            <div class="container">
-                <div class="section-header">
-                    <div class="badge-pill badge-purple">Verified Credentials</div>
-                    <h2 class="section-title">Certifications & Accreditations</h2>
-                    <p class="section-desc">Industry-accredited qualifications in Java programming, networking, AI/ML, and agentic workflows.</p>
-                </div>
-
-                <div class="certs-grid">
-                    
-                    <div class="cert-card">
-                        <div class="cert-icon-wrapper infosys">
-                            <i class="fa-brands fa-java"></i>
-                        </div>
-                        <div class="cert-details">
-                            <span class="cert-year">2024</span>
-                            <h3>Infosys Certified Java Programmer</h3>
-                            <p class="cert-org">Infosys Accreditation</p>
-                            <p class="cert-desc">Verified accreditation in Object-Oriented Programming, Data Structures, Algorithms, and Core Java.</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card">
-                        <div class="cert-icon-wrapper nptel">
-                            <i class="fa-solid fa-network-wired"></i>
-                        </div>
-                        <div class="cert-details">
-                            <span class="cert-year">2025</span>
-                            <h3>Demystifying Networking</h3>
-                            <p class="cert-org">NPTEL / IIT Certification</p>
-                            <p class="cert-desc">Certified in TCP/IP protocol architecture, socket programming, routing algorithms, and network security.</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card">
-                        <div class="cert-icon-wrapper udemy">
-                            <i class="fa-solid fa-brain"></i>
-                        </div>
-                        <div class="cert-details">
-                            <span class="cert-year">2025</span>
-                            <h3>AI & ML Made Easy: From Basic to Advanced</h3>
-                            <p class="cert-org">Udemy Professional Certification</p>
-                            <p class="cert-desc">Comprehensive training in machine learning models, feature engineering, classification algorithms, and AI workflows.</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card">
-                        <div class="cert-icon-wrapper fullcourse">
-                            <i class="fa-solid fa-robot"></i>
-                        </div>
-                        <div class="cert-details">
-                            <span class="cert-year">2025</span>
-                            <h3>AI & Automation — Full Course Completion</h3>
-                            <p class="cert-org">Professional Certification</p>
-                            <p class="cert-desc">Complete mastery over robotic process automation (RPA), LLM API integrations, and workflow automation.</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card">
-                        <div class="cert-icon-wrapper simplilearn">
-                            <i class="fa-solid fa-microchip"></i>
-                        </div>
-                        <div class="cert-details">
-                            <span class="cert-year">2026</span>
-                            <h3>AI Agents for Beginners</h3>
-                            <p class="cert-org">Simplilearn SkillUp</p>
-                            <p class="cert-desc">Specialized training in Agentic AI frameworks, tool calling, and multi-agent reasoning architecture.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Education History Timeline Section -->
-        <section id="education" class="section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <div class="badge-pill badge-blue">Academic Record</div>
-                    <h2 class="section-title">Education History</h2>
-                    <p class="section-desc">Academic record and engineering degree coursework.</p>
-                </div>
-
-                <div class="timeline-wrapper">
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-card">
-                            <span class="timeline-year">2023 – 2027 (Final Year)</span>
-                            <h3>B.Tech – Information Technology</h3>
-                            <p class="timeline-inst"><i class="fa-solid fa-building-columns"></i> VSB Engineering College, Karur</p>
-                            <div class="timeline-score-badge"><i class="fa-solid fa-star"></i> CGPA: <b>7.9 / 10</b></div>
-                            <p class="timeline-desc">Specializing in AI Systems, Software Engineering, Database Management Systems, Computer Networks, and Data Structures.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-card">
-                            <span class="timeline-year">Completed March 2023</span>
-                            <h3>Higher Secondary (Class XII)</h3>
-                            <p class="timeline-inst"><i class="fa-solid fa-school"></i> Bharani Park Matric Hr. Sec. School, Karur</p>
-                            <div class="timeline-score-badge secondary"><i class="fa-solid fa-check"></i> Percentage: <b>69.33%</b></div>
-                            <p class="timeline-desc">Completed Higher Secondary Certificate education with focus on Mathematics, Physics, Chemistry, and Computer Science.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section-padding bg-alt">
-            <div class="container">
-                <div class="section-header">
-                    <div class="badge-pill badge-emerald">Reach Out</div>
-                    <h2 class="section-title">Contact & Professional Outreach</h2>
-                    <p class="section-desc">Let's discuss full-time engineering roles, freelance software projects, or technical inquiries.</p>
-                </div>
-
-                <div class="contact-grid">
-                    
-                    <!-- Contact Cards -->
-                    <div class="contact-cards-col">
-                        
-                        <div class="c-info-card" onclick="copyText('mukilarasu55@gmail.com', 'Email Address')">
-                            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
-                            <div>
-                                <h4>Email Address</h4>
-                                <p class="c-value">mukilarasu55@gmail.com</p>
-                                <span class="c-hint"><i class="fa-regular fa-copy"></i> Click to copy</span>
-                            </div>
-                        </div>
-
-                        <div class="c-info-card" onclick="copyText('9080030538', 'Phone Number')">
-                            <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
-                            <div>
-                                <h4>Phone Number</h4>
-                                <p class="c-value">+91 90800 30538</p>
-                                <span class="c-hint"><i class="fa-regular fa-copy"></i> Click to copy</span>
-                            </div>
-                        </div>
-
-                        <div class="c-info-card">
-                            <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
-                            <div>
-                                <h4>Location</h4>
-                                <p class="c-value">Karur, Tamil Nadu, India</p>
-                            </div>
-                        </div>
-
-                        <div class="c-info-card">
-                            <div class="c-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                            <div>
-                                <h4>Download Resume</h4>
-                                <p class="c-value"><a href="MUKILARASU_S_PERFECT_RESUME.pdf" download="MUKILARASU_S_PERFECT_RESUME.pdf" class="c-link">Download PDF Resume <i class="fa-solid fa-download"></i></a></p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Contact Form -->
-                    <form class="contact-form-card" id="contactForm">
-                        <h3>Send Message to Mukilarasu</h3>
-                        <p class="form-subtext">Fill in the details below and I will get back to you promptly:</p>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" required placeholder="John Doe">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input type="email" id="email" required placeholder="john@example.com">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" placeholder="Project Inquiry / Job Opportunity">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="4" required placeholder="Write your message here..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-blue btn-block btn-lg">
-                            <i class="fa-solid fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-left">
-                <div class="footer-logo">&lt;MUKILARASU.S/&gt;</div>
-                <p>Full-Stack Developer & AI Systems Engineer • Karur, Tamil Nadu</p>
-            </div>
-            <div class="footer-right">
-                <a href="#hero">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
-            </div>
-        </div>
-        <div class="footer-sub">&copy; 2026 Mukilarasu S. Crafted with precision for career & freelance opportunities.</div>
-    </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919080030538?text=Hi%20Mukilarasu!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" class="floating-whatsapp" aria-label="WhatsApp Chat">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span>Chat on WhatsApp</span>
-    </a>
-
-    <!-- Project Detail Modal Sandbox -->
-    <div class="modal-overlay" id="projectModal">
-        <div class="modal-card">
-            <button class="modal-close" onclick="closeProjectModal()">&times;</button>
-            <div class="modal-body-content" id="modalContentBody">
-                <!-- Dynamically Populated by JS -->
-            </div>
-        </div>
+      <div class="nav-actions">
+        <a href="MUKILARASU_S_PERFECT_RESUME.pdf" download="MUKILARASU_S_PERFECT_RESUME.pdf" class="btn btn-outline">
+          <i class="fa-solid fa-download"></i> Resume PDF
+        </a>
+        <a href="https://wa.me/919080030538?text=Hi%20Mukilarasu!%20I%20saw%20your%20portfolio%20and%20wanted%20to%20connect." target="_blank" class="btn btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Chat Live
+        </a>
+      </div>
     </div>
+  </nav>
 
-    <!-- Toast Notification -->
-    <div class="toast-notification" id="toast">Copied to clipboard!</div>
+  <!-- Main Container -->
+  <main class="main-container">
 
-    <!-- Main Script -->
-    <script src="script.js"></script>
+    <!-- HERO SECTION -->
+    <section class="hero-grid" id="hero">
+      <div class="profile-card">
+        <div class="profile-img-wrap">
+          <img src="profile.jpg" alt="Mukilarasu S">
+        </div>
+        <h2 style="font-family: var(--font-heading); font-size: 20px; font-weight: 800;">MUKILARASU S</h2>
+        <div class="status-badge">
+          <span class="status-dot"></span> Class of 2027 • VSB IT
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Hi, I'm <span class="text-gradient">Mukilarasu S</span>
+        </h1>
+        <div class="hero-role">
+          <i class="fa-solid fa-code"></i> Full-Stack Developer | AI &amp; Automation Engineer
+        </div>
+        <p class="hero-desc">
+          Final-year <b>B.Tech Information Technology</b> student (CGPA: <b>7.9 / 10</b>) at <b>VSB Engineering College, Karur</b>. Specialist in building production-grade enterprise Java backends with <b>Spring Boot</b>, autonomous multi-agent RAG pipelines with <b>Groq LLMs</b>, cross-platform desktop applications with <b>Electron</b>, and multi-tenant SaaS structures on <b>Railway</b>.
+        </p>
+
+        <div class="hero-cta-row">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fa-solid fa-rocket"></i> Explore Live Projects
+          </a>
+          <a href="https://vizro.vercel.app/" target="_blank" class="btn btn-outline">
+            <i class="fa-solid fa-globe"></i> VIZRO Freelancing Platform
+          </a>
+          <a href="https://github.com/Mukil630/Botify" target="_blank" class="btn btn-outline">
+            <i class="fa-brands fa-github"></i> Botify SaaS Repo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CANDIDATE AI PORTFOLIO ASSISTANT -->
+    <section class="ai-section" id="ai-assistant">
+      <div class="ai-header">
+        <div class="ai-title">
+          <i class="fa-solid fa-robot"></i> Mukil's Candidate AI Assistant
+        </div>
+        <span class="ai-badge">⚡ Live Q&amp;A Engine</span>
+      </div>
+
+      <div class="ai-chips">
+        <span style="font-size: 13px; color: var(--text-muted); align-self: center;">Quick Questions:</span>
+        <button class="ai-chip" onclick="askAI('Tell me about Botify WhatsApp SaaS platform')">⚡ Botify WhatsApp SaaS</button>
+        <button class="ai-chip" onclick="askAI('Tell me about VIZRO Vertex freelancing')">🌐 VIZRO Vertex</button>
+        <button class="ai-chip" onclick="askAI('Tell me about The Dream Elevate bakery store')">🎂 The Dream Elevate</button>
+        <button class="ai-chip" onclick="askAI('Tell me about The Saivi Collection boutique')">👗 The Saivi Collection</button>
+        <button class="ai-chip" onclick="askAI('Tell me about Jarvis AI Assistant')">🎙️ Jarvis Virtual Assistant</button>
+        <button class="ai-chip" onclick="askAI('What is Mukil\'s experience with Java and Spring Boot?')">☕ Java &amp; Spring Boot</button>
+      </div>
+
+      <div class="ai-chat-stream" id="chatStream">
+        <div class="chat-bubble bot">
+          Welcome to Mukilarasu's Portfolio! 👋<br><br>
+          I am Mukil's AI Assistant. Ask me anything about Mukil's production client deployments like <b>Botify WhatsApp SaaS</b>, <b>The Dream Elevate</b>, <b>The Saivi Collection</b>, <b>VIZRO Vertex</b>, <b>Jarvis AI Agent</b>, <b>Infosys Java Certification</b>, or <b>Hero MotoCorp &amp; IBM internships</b>!
+        </div>
+      </div>
+
+      <div class="ai-input-row">
+        <input type="text" class="ai-input" id="chatInput" placeholder="Ask a question about Mukil's projects, Spring Boot experience, or background..." onkeydown="if(event.key==='Enter') sendUserQuery()">
+        <button class="btn btn-primary" onclick="sendUserQuery()">
+          <i class="fa-solid fa-paper-plane"></i> Ask AI
+        </button>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTION PROJECTS -->
+    <section id="projects">
+      <div class="section-title-wrap">
+        <h2 class="section-title">
+          <i class="fa-solid fa-cubes"></i> Featured Live Projects &amp; SaaS Platforms
+        </h2>
+        <p class="section-subtitle">Production-ready web applications, desktop invoicing platforms, and autonomous AI agents.</p>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1: Botify -->
+        <div class="project-card">
+          <img src="botify_preview.jpg" alt="Botify SaaS" class="project-thumb" onerror="this.src='botify_logo.png'">
+          <div class="project-body">
+            <div>
+              <div class="project-tag">AI WHATSAPP SAAS</div>
+              <h3>Botify – AI-Powered WhatsApp Bot SaaS</h3>
+              <p>Multi-tenant SaaS platform empowering businesses to deploy context-aware AI WhatsApp bots, appointment booking automations, tiered subscriptions, and admin analytics.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Groq LLM</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Railway</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Mukil630/Botify" target="_blank" class="btn btn-outline">
+                <i class="fa-brands fa-github"></i> GitHub Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: VIZRO Vertex -->
+        <div class="project-card">
+          <img src="vizro_logo.png" alt="VIZRO Vertex" class="project-thumb">
+          <div class="project-body">
+            <div>
+              <div class="project-tag">FREELANCE PLATFORM</div>
+              <h3>VIZRO Vertex Solutions</h3>
+              <p>Custom software engineering agency platform showcasing full-stack client solutions, automated invoicing workflows, and custom enterprise deployments.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Tailwind</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://vizro.vercel.app/" target="_blank" class="btn btn-primary">
+                <i class="fa-solid fa-globe"></i> Live Platform
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: SGC Billing -->
+        <div class="project-card">
+          <img src="jarvis_preview.jpg" alt="SGC Billing" class="project-thumb">
+          <div class="project-body">
+            <div>
+              <div class="project-tag">DESKTOP APPLICATION</div>
+              <h3>SGC Billing Desktop System</h3>
+              <p>Cross-platform desktop application for retail invoicing, headless PDF compilation via Puppeteer, dynamic inventory tracking, and OAuth Google Drive backup.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Electron</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Puppeteer</span>
+                <span class="tech-tag">Google API</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Mukil630/sgc-billing" target="_blank" class="btn btn-outline">
+                <i class="fa-brands fa-github"></i> GitHub Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: The Dream Elevate -->
+        <div class="project-card">
+          <img src="dreamelevate_preview.jpg" alt="The Dream Elevate" class="project-thumb" onerror="this.src='dream_real.jpg'">
+          <div class="project-body">
+            <div>
+              <div class="project-tag">E-COMMERCE PLATFORM</div>
+              <h3>The Dream Elevate Store</h3>
+              <p>High-converting custom bakery store web platform featuring real-time product catalogs, custom order booking forms, and Supabase backend integration.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Supabase</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Mukil630/DREAM_ELEVATES" target="_blank" class="btn btn-outline">
+                <i class="fa-brands fa-github"></i> GitHub Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: The Saivi Collection -->
+        <div class="project-card">
+          <img src="saivi_preview.jpg" alt="The Saivi Collection" class="project-thumb" onerror="this.src='saivi_real.jpg'">
+          <div class="project-body">
+            <div>
+              <div class="project-tag">BOUTIQUE E-COMMERCE</div>
+              <h3>The Saivi Collection Store</h3>
+              <p>E-commerce web store for premium clothing and jewellery featuring responsive UI, cart state management, and Supabase database integration.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Supabase</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Mukil630/saivi-collection" target="_blank" class="btn btn-outline">
+                <i class="fa-brands fa-github"></i> GitHub Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Personal AI Assistant (Jarvis) -->
+        <div class="project-card">
+          <img src="jarvis_preview.jpg" alt="Jarvis Virtual Assistant" class="project-thumb">
+          <div class="project-body">
+            <div>
+              <div class="project-tag">VOICE AI AGENT</div>
+              <h3>Personal AI Assistant (Jarvis)</h3>
+              <p>Voice-controlled desktop virtual assistant automating OS system scripts, web searches, local application launches, and task reminders.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">SpeechRec</span>
+                <span class="tech-tag">TTS</span>
+                <span class="tech-tag">System APIs</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Mukil630" target="_blank" class="btn btn-outline">
+                <i class="fa-brands fa-github"></i> GitHub Profile
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILL MATRIX -->
+    <section id="skills">
+      <div class="section-title-wrap">
+        <h2 class="section-title">
+          <i class="fa-solid fa-layer-group"></i> Technical Skill Matrix
+        </h2>
+        <p class="section-subtitle">Core engineering competencies and technology stack.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-code"></i> Languages &amp; Core</h4>
+          <div class="skill-list">
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">C++</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-server"></i> Backend &amp; Frameworks</h4>
+          <div class="skill-list">
+            <span class="skill-pill">Spring Boot</span>
+            <span class="skill-pill">RESTful APIs</span>
+            <span class="skill-pill">Hibernate ORM</span>
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">Flask</span>
+            <span class="skill-pill">Electron</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-brain"></i> AI &amp; Databases</h4>
+          <div class="skill-list">
+            <span class="skill-pill">Groq LLM API</span>
+            <span class="skill-pill">RAG Architectures</span>
+            <span class="skill-pill">Vector Search</span>
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">Supabase</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-cloud"></i> Tools &amp; Platforms</h4>
+          <div class="skill-list">
+            <span class="skill-pill">Git &amp; GitHub</span>
+            <span class="skill-pill">Railway</span>
+            <span class="skill-pill">Vercel</span>
+            <span class="skill-pill">Puppeteer</span>
+            <span class="skill-pill">Postman</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & CERTIFICATIONS -->
+    <section id="experience">
+      <div class="exp-cert-grid">
+        
+        <!-- Experience Column -->
+        <div class="exp-card">
+          <div class="section-title-wrap" style="margin-bottom: 20px;">
+            <h3 class="section-title" style="font-size: 20px;">
+              <i class="fa-solid fa-briefcase"></i> Work Experience &amp; Internships
+            </h3>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-role">Research &amp; Development Intern</div>
+            <div class="timeline-org">Hero MotoCorp Ltd. (1 Month)</div>
+            <div class="timeline-desc">Gained practical exposure to automotive engineering workflows, structural research testing, and corporate product development pipelines.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-role">AI &amp; Automation Weekend Intern</div>
+            <div class="timeline-org">IBM (2026)</div>
+            <div class="timeline-desc">Completed curriculum on enterprise AI architecture, robotic process automation, cognitive agents, and intelligent system workflows.</div>
+          </div>
+        </div>
+
+        <!-- Certifications Column -->
+        <div class="exp-card" id="certifications">
+          <div class="section-title-wrap" style="margin-bottom: 20px;">
+            <h3 class="section-title" style="font-size: 20px;">
+              <i class="fa-solid fa-award"></i> Engineering Certifications
+            </h3>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-role">Infosys Certified Java Programmer</div>
+            <div class="timeline-org">Infosys (2024)</div>
+            <div class="timeline-desc">Validated proficiency in Java OOPs, Data Structures, Exception Handling, Collections, and Enterprise Application Design.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-role">Demystifying Networking</div>
+            <div class="timeline-org">NPTEL (2025)</div>
+            <div class="timeline-desc">Mastered TCP/IP protocols, subnetting, network socket programming, and routing security.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-role">AI Agents for Beginners</div>
+            <div class="timeline-org">Simplilearn SkillUp (2026)</div>
+            <div class="timeline-desc">Specialized training in autonomous task execution agents, function calling, and LLM orchestration.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="nav-container">
+      <p>© 2026 MUKILARASU S. Built with modern web standards and hosted on Railway &amp; GitHub.</p>
+    </div>
+  </footer>
+
+  <!-- Candidate AI Engine Script -->
+  <script>
+    const knowledgeBase = {
+      botify: "<b>Botify WhatsApp SaaS</b> is a multi-tenant platform built with Flask, Node.js, Groq LLM API, PostgreSQL, and Railway. It empowers businesses to deploy custom AI-powered WhatsApp bots for automated customer support, appointment scheduling, and admin dashboards.",
+      vizro: "<b>VIZRO Vertex Solutions</b> (https://vizro.vercel.app/) is a custom software engineering agency platform built with React, Node.js, and Vercel. It showcases Mukil's freelance software solutions for retail and startup clients.",
+      dreamelevate: "<b>The Dream Elevate</b> is an e-commerce website for custom bakery orders built with HTML5, CSS3, JavaScript, and Supabase database integration.",
+      saivi: "<b>The Saivi Collection</b> is a boutique e-commerce web platform for clothing and jewellery built with React, Node.js, and Supabase.",
+      jarvis: "<b>Personal AI Assistant (Jarvis)</b> is a voice-controlled Python desktop assistant that automates local OS tasks, terminal scripts, web searches, and application launching.",
+      java: "Mukil is an <b>Infosys Certified Java Programmer</b> (2024) with deep expertise in Spring Boot, JPA/Hibernate ORM, microservice architecture, and Data Structures & Algorithms in Java.",
+      default: "Mukilarasu S is a final-year B.Tech IT student at VSB Engineering College (CGPA: 7.9/10). He is experienced in Spring Boot enterprise Java backends, autonomous AI RAG agents (Groq LLM), and full-stack SaaS applications."
+    };
+
+    function askAI(query) {
+      const stream = document.getElementById('chatStream');
+      
+      // User bubble
+      const uBubble = document.createElement('div');
+      uBubble.className = 'chat-bubble user';
+      uBubble.textContent = query;
+      stream.appendChild(uBubble);
+
+      // Bot bubble
+      const bBubble = document.createElement('div');
+      bBubble.className = 'chat-bubble bot';
+      
+      const qLower = query.toLowerCase();
+      let ans = knowledgeBase.default;
+
+      if (qLower.includes('botify')) ans = knowledgeBase.botify;
+      else if (qLower.includes('vizro')) ans = knowledgeBase.vizro;
+      else if (qLower.includes('dream')) ans = knowledgeBase.dreamelevate;
+      else if (qLower.includes('saivi')) ans = knowledgeBase.saivi;
+      else if (qLower.includes('jarvis')) ans = knowledgeBase.jarvis;
+      else if (qLower.includes('java') || qLower.includes('spring')) ans = knowledgeBase.java;
+
+      bBubble.innerHTML = ans;
+      stream.appendChild(bBubble);
+      stream.scrollTop = stream.scrollHeight;
+    }
+
+    function sendUserQuery() {
+      const input = document.getElementById('chatInput');
+      const text = input.value.trim();
+      if (text !== '') {
+        askAI(text);
+        input.value = '';
+      }
+    }
+  </script>
 </body>
 </html>
