@@ -1,51 +1,36 @@
 <p align="center">
-  <img src="assets/tech_banner.svg" alt="MUKILARASU S Header Banner" width="100%" />
+  <img src="assets/tech_banner.svg" alt="WELCOME TO MY GITHUB PROFILE" width="100%" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Plus+Jakarta+Sans&weight=700&size=18&color=0EA5E9&center=true&vCenter=true&width=850&height=45&loop=true&lines=Java+Backend+Developer+%E2%80%A2+AI+%26+Automation+Engineer;Spring+Boot+Microservices+%E2%80%A2+LLM+Multi-Agent+RAG;Creator+of+Botify+WhatsApp+SaaS+%E2%80%A2+VIZRO+Vertex" alt="Developer Roles Typing Animation" />
+  <img src="assets/holographic_tech_card.jpg" alt="MUKILARASU S Hologram" width="100%" style="border-radius: 12px;" />
 </p>
 
 <p align="center">
-  <a href="https://mukil630.github.io/MUKIL_PORTFOLIO/"><img src="https://img.shields.io/badge/🌐_Live_Portfolio-0070F3?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Portfolio"/></a>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=16&color=0EA5E9&center=true&vCenter=true&width=850&height=40&loop=true&lines=Java+Developer+%E2%80%A2+Full-Stack+Developer+%E2%80%A2+AI+%26+Automation+Engineer+%E2%80%A2+Freelancer" alt="Developer Roles" />
+</p>
+
+<p align="center">
   <a href="https://linkedin.com/in/mukilarasu-s-333771302"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="https://leetcode.com/u/Mukil55"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/></a>
   <a href="mailto:mukilarasu55@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-  <a href="https://wa.me/919080030538"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"/></a>
-  <img src="https://komarev.com/ghpvc/?username=Mukil630&color=0EA5E9&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=Mukil630&color=0EA5E9&style=for-the-badge&label=VISITORS" alt="Profile Views" />
 </p>
 
 ---
 
-### ⚡ Executive Engineering Summary
+### 🧬 About Me
 
-I am a final-year **B.Tech Information Technology** student at **VSB Engineering College, Karur** (CGPA: **7.9 / 10**), specializing in **Enterprise Java Backend Architecture** and **Autonomous AI Systems Engineering**.
+I am a final-year **B.Tech Information Technology** student at **VSB Engineering College, Karur** (CGPA: **8.1/10**), with hands-on experience in AI, automation, and full-stack development. 
 
-```java
-public class MukilarasuS extends SoftwareEngineer {
-    private final String developer   = "MUKILARASU S";
-    private final String location    = "Karur, Tamil Nadu, India";
-    private final String education   = "B.Tech IT @ VSB Engineering College (Class of 2027)";
-    private final String[] coreStack = {
-        "Enterprise Java & Spring Boot Backends",
-        "Autonomous AI Multi-Agent RAG Pipelines",
-        "Cross-Platform SaaS & Desktop Engineering",
-        "High-Throughput PostgreSQL & Database Optimization"
-    };
-
-    public void executionPhilosophy() {
-        System.out.println("Automating complex workflows. Engineering scalable, production-ready applications.");
-    }
-}
-```
-
-* ☕ **Enterprise Java & Backend Architecture:** Experienced in building production-grade Java backends utilizing **Spring Boot**, microservices, JPA/Hibernate, Spring Security, and RESTful APIs.
-* 🤖 **AI & Automation Systems:** Integrating Large Language Models (LLMs) like Groq, Claude, and OpenAI into event-driven workflows, vector databases, and multi-tenant AI agents.
-* 📦 **Full-Stack & Desktop SaaS:** Constructing cross-platform desktop interfaces with **Electron** & **React**, and deploying multi-tenant SaaS structures on **Railway** & **Vercel**.
-* 📚 **CS Foundations:** Strong mastery in Data Structures & Algorithms (DSA) in Java, Relational Database Management Systems (DBMS), and Computer Networks.
+* 💡 **My Philosophy:** Building production-ready, scalable applications and intelligent agents that solve real-world business challenges.
+* ☕ **Backend Focus:** Developing enterprise-grade Java backends utilizing **Spring Boot**, designing microservices, configuring JPA/Hibernate, and structuring secure RESTful APIs.
+* 🤖 **AI & Automation Specialist:** Integrating Large Language Models (LLMs) like Claude, GPT, and Groq into modular workflows. Experiencing in RAG architectures, prompt engineering, vector searching, and autonomous task execution agents.
+* 📦 **Full-Stack & Desktop:** Constructing cross-platform desktop interfaces with **Electron** and **React**, and deploying multi-tenant SaaS structures on **Railway**.
+* 📚 **CS Fundamentals:** Strong foundation in Data Structures & Algorithms (DSA) in Java, Relational Database Management Systems (DBMS), and Computer Networks.
 
 <p align="left">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=14&pause=1000&color=38BDF8&width=750&loop=true&lines=%3E_Initializing+Spring+Boot+Microservices...;%3E_Connecting+to+High-Availability+PostgreSQL...;%3E_Deploying+Autonomous+LLM+Multi-Agent+RAG+Pipelines...;%3E_Status%3A+Production+Ready+%E2%80%A2+100%25+Uptime" alt="Terminal Action Animation" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=14&pause=1000&color=38BDF8&width=650&loop=true&lines=%3E_Initializing+development+environment...;%3E_Establishing+connection+to+PostgreSQL+database...;%3E_Spawning+autonomous+AI+agents...;%3E_System+online.+Backend+services+active+100%25%21" alt="Terminal Action Animation" />
 </p>
 
 ---
@@ -60,7 +45,6 @@ public class MukilarasuS extends SoftwareEngineer {
       <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
       <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
       <img src="https://img.shields.io/badge/SQL-00758F?style=flat-square&logo=mysql&logoColor=white" alt="SQL" />
-      <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++" />
     </td>
     <td valign="top" width="50%">
       <h4>🚀 Backend & Frameworks</h4>
@@ -73,18 +57,15 @@ public class MukilarasuS extends SoftwareEngineer {
   </tr>
   <tr>
     <td valign="top" width="50%">
-      <h4>🗄️ Databases & AI Tech</h4>
+      <h4>🗄️ Databases</h4>
       <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
       <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
-      <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase" />
-      <img src="https://img.shields.io/badge/Groq_LLM-F55036?style=flat-square&logo=openai&logoColor=white" alt="Groq" />
     </td>
     <td valign="top" width="50%">
-      <h4>☁️ Cloud & Tools</h4>
+      <h4>☁️ Tools & Platforms</h4>
       <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
       <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
       <img src="https://img.shields.io/badge/Railway-131415?style=flat-square&logo=railway&logoColor=white" alt="Railway" />
-      <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
       <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman" />
     </td>
   </tr>
@@ -92,75 +73,87 @@ public class MukilarasuS extends SoftwareEngineer {
 
 ---
 
-### 🚀 Production & Freelance Platforms
+### 📂 Featured Projects
 
-#### 💬 [Botify – AI-Powered WhatsApp Bot SaaS](https://github.com/Mukil630/Botify)
-*Production multi-tenant SaaS platform enabling businesses to deploy custom AI-powered WhatsApp bots.*
-- **Tech Stack:** Flask, Node.js, Groq LLM API, PostgreSQL, Railway.
-- **Key Features:** Context-aware AI chat automation, appointment booking, tiered subscription models, and interactive admin control panel.
+#### 💬 [Botify – AI-Powered WhatsApp Bot SaaS (Freelance)](https://github.com/Mukil630/Botify)
+*A production-ready multi-tenant SaaS platform enabling businesses to deploy custom AI-powered WhatsApp bots.*
+- **Tech Stack:** Flask, Node.js, Groq LLM, PostgreSQL, Railway.
+- **Key Features:** Supports context-aware AI chat automation, appointment booking, tiered subscription models, and an admin dashboard.
 
-#### 🌐 [VIZRO Vertex Solutions](https://vizro.vercel.app/)
-*Custom software agency platform showcasing full-stack client software deployments.*
-- **Tech Stack:** React, Node.js, Tailwind CSS, Vercel.
-- **Key Features:** Interactive client portal, custom web application architecture, and automated lead management.
-
-#### 💳 [SGC Billing – Retail Invoice Desktop System](https://github.com/Mukil630/sgc-billing)
-*Cross-platform desktop application for retail invoicing, inventory management, and automated receipt generation.*
+#### 💳 [SGC Billing – Desktop Invoice Application (Freelance)](https://github.com/Mukil630/sgc-billing)
+*A desktop-based billing and invoice creation system for retail clients.*
 - **Tech Stack:** Electron, React, Puppeteer, Google Drive API.
-- **Key Features:** Dynamic billing entry forms, headless PDF compilation via Puppeteer, and secure OAuth cloud sync to Google Drive.
+- **Key Features:** Interactive React forms for invoice entries, automated headless PDF invoice compilation with Puppeteer, and secure cloud sync to Google Drive via OAuth.
 
-#### 🎂 [The Dream Elevate Store](https://github.com/Mukil630/DREAM_ELEVATES)
-*High-converting e-commerce bakery ordering platform.*
-- **Tech Stack:** HTML5, CSS3, JavaScript, Supabase.
-- **Key Features:** Real-time product catalog, custom cake order booking forms, and automated database sync.
+#### 🤖 [Personal AI Assistant (Jarvis) (Personal Project)](https://github.com/Mukil630)
+*A voice-controlled desktop virtual assistant automating local tasks.*
+- **Tech Stack:** Python, Speech Recognition, Text-to-Speech (TTS), System APIs.
+- **Key Features:** Triggers voice-based conversations, performs web searches, executes OS automation commands, and handles system scripts.
 
-#### 👗 [The Saivi Collection Boutique](https://github.com/Mukil630/saivi-collection)
-*Boutique fashion e-commerce store for clothing and jewellery.*
-- **Tech Stack:** React, Node.js, Supabase.
-- **Key Features:** Responsive mobile-first UI, cart state management, and real-time inventory tracking.
+#### 📝 [AI Billing Automation Bot (Freelance)](https://github.com/Mukil630)
+*An intelligent Telegram-based billing system that processes handwritten invoices.*
+- **Tech Stack:** Python, Groq LLM API, Telegram Bot API, Cloudinary.
+- **Key Features:** Uses LLM vision to extract structured JSON data from handwritten bill images, auto-matches customers, uploads receipts to Cloudinary, and delivers digital invoices to clients.
+
+#### 📧 [Gmail Automation Agent (Personal Project)](https://github.com/Mukil630)
+*An AI automation agent overseeing calendar schedules and inbox correspondence.*
+- **Tech Stack:** Python, Gmail API, Google Calendar API.
+- **Key Features:** Drafts intelligent context-aware replies to emails, schedules events, triggers task reminders, and structures automated mail workflows.
 
 ---
 
-### 💼 Work Experience & Internships
+### 💼 Internships
 
 - **Hero MotoCorp Ltd. — Research & Development Intern (1 Month)**
-  *Gained practical exposure to engineering testing workflows, automotive R&D, and product development processes.*
-- **IBM — AI & Automation Weekend Intern (2026)**
-  *Completed specialized curriculum on enterprise AI architecture, robotic process automation, and cognitive agents.*
+  *Gained practical exposure to engineering workflows, automotive research, and product development processes.*
+- **IBM — AI & Automation Weekend Internship (2026)**
+  *Completed a hands-on curriculum covering core AI concepts, automation pipelines, and intelligent system applications.*
 
 ---
 
-### 🏆 Engineering Certifications
+### 🏆 Certifications
 
-- 🏅 **Infosys Certified Java Programmer** — Infosys (2024)
-- 🏅 **AI & Automation — Full Course Completion** (2025)
-- 🏅 **Demystifying Networking** — NPTEL (2025)
+- 🏅 **AI & Automation** — Full Course Completion (2025)
 - 🏅 **AI & ML Made Easy: From Basic to Advanced** — Udemy (2025)
+- 🏅 **Demystifying Networking** — NPTEL (2025)
+- 🏅 **Infosys Certified Java Programmer** — Infosys (2024)
 - 🏅 **AI Agents for Beginners** — Simplilearn SkillUp (2026)
 
 ---
 
-### 📊 Engineering Activity & Analytics
+### 📊 Coding Analytics & Activity
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Mukil630&show_icons=true&title_color=0ea5e9&icon_color=38bdf8&text_color=94a3b8&bg_color=080c14&hide_border=true&align=center" alt="Mukil630 GitHub Stats" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mukil630&layout=compact&title_color=0ea5e9&icon_color=38bdf8&text_color=94a3b8&bg_color=080c14&hide_border=true&align=center" alt="Mukil630 Top Languages" width="48%" />
+  <img src="https://github-profile-trophy.vercel.app/?username=Mukil630&theme=tokyonight&margin-w=15&no-background=true&no-border=true" alt="Mukil630 Trophies" width="100%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mukil630&theme=tokyonight&background=080C14&hide_border=true" alt="Mukil630 Git Streak" width="97%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Mukil630&show_icons=true&title_color=0ea5e9&icon_color=38bdf8&text_color=94a3b8&bg_color=080c14&hide_border=true&align=center" alt="Mukil630's GitHub Stats" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mukil630&layout=compact&title_color=0ea5e9&icon_color=38bdf8&text_color=94a3b8&bg_color=080c14&hide_border=true&align=center" alt="Mukil630's Top Languages" width="48%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mukil630&theme=tokyonight&bg_color=080C14&hide_border=true" alt="Mukil630 Commit Graph" width="97%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mukil630&theme=tokyonight&background=080C14&hide_border=true" alt="Mukil630's Git Streak" width="97%" />
 </p>
 
 <p align="center">
-  <img src="https://leetcard.jacob.cai/api/Mukil55?theme=dark&font=Fira%20Code&active_color=0EA5E9" alt="Mukil55 LeetCode Stats" width="70%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mukil630&theme=tokyonight&bg_color=080C14&hide_border=true" alt="Mukil630's Commit Graph" width="97%" />
+</p>
+
+<p align="center">
+  <img src="https://leetcard.jacob.cai/api/Mukil55?theme=dark&font=Fira%20Code&active_color=0EA5E9" alt="Mukil55's LeetCode Stats" width="70%" />
+</p>
+
+---
+
+### 🐍 Contribution Snake
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Mukil630/Mukil630/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake" />
 </p>
 
 ---
 
 <p align="center">
-  <i>"Building production-ready, scalable applications and intelligent agents that solve real-world business challenges."</i>
+  <i>"Automating complex operations. Building responsive interfaces. Engineering AI for the future."</i>
 </p>
