@@ -1,10 +1,25 @@
+<!-- HEADER BANNER -->
 <p align="center">
-  <img src="assets/tech_banner.svg" alt="WELCOME TO MUKILARASU S GITHUB PROFILE" width="100%" />
+  <img src="assets/tech_banner.svg" alt="MUKILARASU S banner" width="100%" />
 </p>
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=20&duration=2500&pause=1500&color=0EA5E9&center=true&vCenter=true&width=880&height=45&loop=true&lines=%3E_Initializing+JARVIS+AI+Neural+Core...;%3E_Infosys+Certified+Java+Developer;%3E_AI+%26+Automation+Engineer;%3E_Autonomous+Agent+%26+Full-Stack+Architect" alt="Developer Typing Header" />
-</p>
+<!-- FUTURISTIC HERO CODING ANIMATION -->
+<div align="center">
+  <img 
+    src="https://user-images.githubusercontent.com/74038190/216664197-03582496-863e-4d48-8d40-b262828b8a40.gif"
+    width="680"
+    alt="Futuristic AI Developer Coding Animation"
+    style="border-radius: 12px;"
+  />
+</div>
+
+<!-- DYNAMIC TYPING SVG -->
+<h1 align="center">
+  <img 
+    src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=2500&pause=1500&color=0EA5E9&center=true&vCenter=true&width=920&height=50&lines=%E2%9A%A1+Hello+World!+I+am+Mukilarasu+S;%E2%98%95+Infosys+Certified+Java+Developer;%F0%9F%A4%96+AI+%26+Automation+Engineer;%F0%9F%9A%80+Architect+of+JARVIS+Autonomous+Voice+Agent;%F0%9F%92%BB+Full-Stack+SaaS+%26+Electron+Developer"
+    alt="Mukilarasu S Typing Header"
+  />
+</h1>
 
 <p align="center">
   <a href="https://linkedin.com/in/mukilarasu-s-333771302"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
@@ -16,144 +31,124 @@
 
 ---
 
-### 🧬 Terminal Telemetry & System Profile
+## ⚡ About Me
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td width="42%" valign="top" align="center">
-      <br/>
-      <img src="assets/holographic_tech_card.jpg" alt="Mukilarasu S Hologram" width="100%" style="border-radius: 12px; border: 2px solid #0EA5E9;" />
-    </td>
-    <td width="58%" valign="top">
-      <pre>
-<code>
-⚡ mukil@jarvis-core:~$ cat developer_profile.yaml
----------------------------------------------------------
-[SYSTEM IDENTITY]
-Name         : Mukilarasu S (Mukil)
-Role         : Java Backend & AI Automation Engineer
-Location     : Karur, Tamil Nadu, India
-Status       : 🟢 Active & Building Production Code
+<div align="center">
+  <img 
+    align="right"
+    alt="Developer Coding Workspace"
+    width="380"
+    src="https://camo.githubusercontent.com/d972b3fdd96f5bcda3cb22db4be78c78db577b6a4aa58d779523cc1f598f1e8d/68747470733a2f2f63646e2e6472696262626c652e636f6d2f75736572732f3733303730332f73637265656e73686f74732f363538313234332f6176656e746f2e676966"
+    style="border-radius: 8px;"
+  />
+</div>
 
-[EDUCATION & CREDENTIALS]
-Degree       : B.Tech Information Technology
-College      : VSB Engineering College, Karur (2023 - 2027)
-CGPA         : 8.1 / 10
-Certificated : Infosys Certified Java Programmer
-Networking   : NPTEL Certified - Demystifying Networking
+- 🎓 **B.Tech – Information Technology**, VSB Engineering College, Karur (2023 – 2027) | **CGPA: 8.1 / 10**
+- ☕ **Infosys Certified Java Programmer** with strong Java & Spring Boot backend foundations
+- 🤖 **AI & Automation Specialist** building autonomous AI agents (JARVIS), LLM pipelines (Groq, OpenAI, Gemini), and OCR automation systems
+- 💼 Experienced in **Full-Stack SaaS Development** (Flask, Node.js, React, PostgreSQL) & Electron Desktop Applications
+- 🏢 Completed **Research & Development Internship at Hero MotoCorp Ltd.** & **IBM AI & Automation Internship**
+- 🧩 Practicing **Data Structures & Algorithms in Java** on LeetCode with strong Computer Networking foundations (NPTEL Certified)
+- 🚀 Dedicated, consistent, and passionate about engineering scalable, production-ready AI solutions
 
-[CORE ARCHITECTURE FOCUS]
-• Java Spring Boot Microservices & RESTful API Engineering
-• Autonomous AI Agent Workflows (ReAct, LangChain, Groq, OpenAI)
-• Full-Stack SaaS Platforms & Electron Desktop Apps
----------------------------------------------------------
-</code>
-      </pre>
-    </td>
-  </tr>
-</table>
-
-#### 💡 Philosophy & Background
-I am a final-year **B.Tech Information Technology** student passionate about constructing enterprise-grade Java backends and intelligent autonomous AI agents. Whether structuring multi-tenant SaaS platforms or engineering voice-controlled AI systems like **JARVIS**, my objective is building reliable, scalable software that solves real business challenges.
-
-- 🎓 **Academic Standing**: VSB Engineering College (2023 – 2027) | **CGPA: 8.1 / 10**
-- ☕ **Backend Focus**: Building secure, high-throughput microservices using **Spring Boot**, JPA/Hibernate, and structured REST APIs.
-- 🤖 **AI & Automation**: Designing multi-step cognitive reasoning agents (ReAct), integrating vision LLMs for OCR invoice parsing, and automating workflows.
-- 🏢 **Industry Exposure**: Completed Research & Development Internship at **Hero MotoCorp Ltd.** and virtual AI Internship with **IBM**.
+**Email:** [mukilarasu55@gmail.com](mailto:mukilarasu55@gmail.com) | **LinkedIn:** [linkedin.com/in/mukilarasu-s-333771302](https://linkedin.com/in/mukilarasu-s-333771302) | **LeetCode:** [leetcode.com/u/Mukil55](https://leetcode.com/u/Mukil55)
 
 ---
 
-### 🛠️ Core Engineering Skill Matrix
+## 🛠️ Technical Stack (My Known Skills)
+
+<div align="center">
+  <img 
+    src="https://skillicons.dev/icons?i=java,py,js,spring,react,nodejs,express,flask,electron,postgres,mysql,sqlite,git,github,postman,vscode,linux&theme=dark"
+    alt="Mukil's Tech Stack"
+  />
+</div>
+
+<br/>
 
 <table width="100%">
   <tr>
     <td valign="top" width="50%">
-      <h4>☕ Languages & CS Foundations</h4>
-      <img src="https://img.shields.io/badge/Java_(Infosys_Certified)-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-      <img src="https://img.shields.io/badge/SQL-00758F?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL" />
-      <img src="https://img.shields.io/badge/Networking_(NPTEL)-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="Networking" />
+      <h4>💻 Languages & Core CS</h4>
+      <img src="https://img.shields.io/badge/Java_(Infosys_Certified)-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
+      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+      <img src="https://img.shields.io/badge/SQL-00758F?style=flat-square&logo=mysql&logoColor=white" alt="SQL" />
+      <img src="https://img.shields.io/badge/Computer_Networking_(NPTEL)-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="Networking" />
     </td>
     <td valign="top" width="50%">
       <h4>🤖 AI, LLM & Automation</h4>
-      <img src="https://img.shields.io/badge/Groq_LLM-F34B21?style=for-the-badge&logo=fastapi&logoColor=white" alt="Groq" />
-      <img src="https://img.shields.io/badge/OpenAI_API-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
-      <img src="https://img.shields.io/badge/ReAct_Agents-0EA5E9?style=for-the-badge&logo=robot&logoColor=white" alt="ReAct" />
-      <img src="https://img.shields.io/badge/Tesseract_OCR-4A90E2?style=for-the-badge&logo=google&logoColor=white" alt="OCR" />
-      <img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright" />
+      <img src="https://img.shields.io/badge/LLMs_(Groq_|_OpenAI_|_Gemini)-0EA5E9?style=flat-square&logo=openai&logoColor=white" alt="LLMs" />
+      <img src="https://img.shields.io/badge/ReAct_Agent_Architectures-8E44AD?style=flat-square&logo=robot&logoColor=white" alt="ReAct" />
+      <img src="https://img.shields.io/badge/Tesseract_OCR-4A90E2?style=flat-square&logo=google&logoColor=white" alt="OCR" />
+      <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" alt="Playwright" />
     </td>
   </tr>
   <tr>
     <td valign="top" width="50%">
-      <h4>🚀 Backend & Frontend Frameworks</h4>
-      <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot" />
-      <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-      <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node" />
-      <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" />
-      <img src="https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white" alt="Electron" />
+      <h4>🚀 Backend & Frameworks</h4>
+      <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=spring-boot&logoColor=white" alt="Spring Boot" />
+      <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+      <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node" />
+      <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
+      <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask" />
+      <img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" alt="Electron" />
     </td>
     <td valign="top" width="50%">
-      <h4>🗄️ Databases & Cloud Tools</h4>
-      <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-      <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-      <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
-      <img src="https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white" alt="Railway" />
-      <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+      <h4>🗄️ Databases & Infrastructure</h4>
+      <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+      <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
+      <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
+      <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+      <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+      <img src="https://img.shields.io/badge/Railway-131415?style=flat-square&logo=railway&logoColor=white" alt="Railway" />
+      <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman" />
     </td>
   </tr>
 </table>
 
 ---
 
-### 📂 Featured Systems & Deployments
+## 📂 Featured Projects
 
-#### 🤖 [JARVIS – Autonomous Voice & System Automation Agent](https://github.com/Mukil630)
-*An intelligent voice-controlled desktop agent with multi-step cognitive reasoning.*
-- **Tech Stack:** Python, Express, Web Speech API, ReAct Agent Loop, System APIs
-- **Key Features:** Features hands-free voice synthesis, terminal command execution, web telemetry, long-term memory store, and a real-time HTML5 audio frequency spectrum analyzer.
+- **🤖 [JARVIS – Autonomous Voice & System Automation Agent](https://github.com/Mukil630)** • *Python, Express, Web Speech API, ReAct Agent Architecture*  
+  Engineered an autonomous voice-controlled agent featuring a multi-step cognitive reasoning loop (ReAct), terminal command execution, live web telemetry, long-term memory store, and real-time HTML5 audio spectrum analyzer.
 
-#### 💬 [Botify – AI-Powered WhatsApp Bot SaaS Platform](https://github.com/Mukil630/Botify)
-*Production-ready multi-tenant SaaS enabling businesses to deploy customized AI WhatsApp assistants.*
-- **Tech Stack:** Flask, Node.js, Groq LLM API, PostgreSQL, Railway Deployment
-- **Key Features:** Supports context-aware AI chat automation, appointment booking, tiered subscription management, and an administrative control dashboard.
+- **💬 [Botify – AI-Powered WhatsApp Bot SaaS Platform](https://github.com/Mukil630/Botify)** • *Flask, Node.js, Groq LLM API, PostgreSQL, Railway*  
+  Production-ready multi-tenant SaaS platform enabling businesses to deploy custom AI-powered WhatsApp bots with automated appointment booking, context-aware AI chat, tiered subscriptions, and admin control dashboard.
 
-#### 📄 [Freelance OCR & LLM Invoice Billing System](https://github.com/Mukil630)
-*An automated Telegram-based billing pipeline for handwritten bill recognition.*
-- **Tech Stack:** Python, Tesseract OCR, Groq LLM Vision, Telegram Bot API, Cloudinary
-- **Key Features:** Uses LLM vision to extract structured JSON data from handwritten bill photos, auto-matches customer profiles, uploads receipts to Cloudinary, and delivers digital invoices with 98%+ accuracy.
+- **📄 [Freelance OCR & LLM Invoice Billing System](https://github.com/Mukil630)** • *Python, Tesseract OCR, Groq LLM Vision API, Telegram Bot API, Cloudinary*  
+  Intelligent billing automation system using LLM vision to extract structured JSON data from handwritten bill images, auto-matching customers, Cloudinary uploads, and delivering digital invoices with 98%+ accuracy.
 
-#### 💳 [SGC Billing – Desktop Invoice Application](https://github.com/Mukil630/sgc-billing)
-*Cross-platform desktop invoicing system for retail and business clients.*
-- **Tech Stack:** Electron, React, Puppeteer, Google Drive API (OAuth 2.0)
-- **Key Features:** Interactive React invoicing interface, automated headless PDF generation with Puppeteer, and encrypted cloud sync to Google Drive.
+- **💳 [SGC Billing – Desktop Invoice Application](https://github.com/Mukil630/sgc-billing)** • *Electron, React, Puppeteer, Google Drive OAuth 2.0*  
+  Desktop invoice management system for retail clients featuring interactive React forms, automated headless PDF invoice compilation with Puppeteer, and secure OAuth cloud sync to Google Drive.
 
-#### ⚡ [Agentic AI Workflow Automation Platform](https://github.com/Mukil630)
-*Autonomous multi-agent task planning and execution engine.*
-- **Tech Stack:** Python, OpenAI / Groq LLM, LangChain Tool Bindings
-- **Key Features:** Autonomous goal decomposition, tool selection, error self-correction, and background execution.
+- **⚡ [Agentic AI Workflow Automation Platform](https://github.com/Mukil630)** • *Python, OpenAI / Groq LLM API, LangChain*  
+  Multi-agent AI ecosystem that autonomously plans, reasons, and executes complex enterprise workflows using LLMs and dynamic tool bindings.
 
 ---
 
-### 💼 Professional Experience
+## 💼 Internships & Work Experience
 
-- **Hero MotoCorp Ltd. — Research & Development Intern (1 Month)**
-  - Gained hands-on experience in automotive R&D workflows, product testing, engineering validation, and industrial design pipelines.
-- **IBM — AI & Automation Virtual Intern (2026)**
-  - Completed intensive curriculum on enterprise AI architecture, automation pipelines, and intelligent system deployment models.
+- **Hero MotoCorp Ltd. — Research & Development Intern (1 Month)**  
+  *Gained practical exposure to automotive research, engineering workflows, testing protocols, and product development cycles.*
 
----
-
-### 🏆 Accredited Certifications
-
-- 🏅 **Infosys Certified Java Programmer** (Infosys, 2024) — Official accreditation for advanced Java application development.
-- 🏅 **Demystifying Networking** (NPTEL, 2025) — Certified in core Computer Networking architecture & TCP/IP protocols.
-- 🏅 **AI & ML Made Easy: Basic to Advanced** (Udemy, 2025) — Machine learning models, algorithms, and system integration.
-- 🏅 **AI Agents for Beginners** (Simplilearn SkillUp, 2026) — Autonomous AI agent workflows and prompt engineering.
+- **IBM — AI & Automation Weekend Internship (2026)**  
+  *Completed hands-on curriculum covering core AI concepts, automation pipelines, and intelligent system architectures.*
 
 ---
 
-### 📊 Coding Analytics & Activity
+## 🏆 Certifications
+
+- 🏅 **Infosys Certified Java Programmer** — Official accreditation for advanced Java programming (2024)
+- 🏅 **Demystifying Networking** — NPTEL Certification in Core Computer Networking & TCP/IP Architecture (2025)
+- 🏅 **AI & ML Made Easy: From Basic to Advanced** — Udemy (2025)
+- 🏅 **AI & Automation Full Course Completion** — (2025)
+- 🏅 **AI Agents for Beginners** — Simplilearn SkillUp (2026)
+
+---
+
+## 📊 Coding Analytics & Activity
 
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=Mukil630&theme=tokyonight&margin-w=15&no-background=true&no-border=true" alt="Mukil630 Trophies" width="100%" />
@@ -174,7 +169,7 @@ I am a final-year **B.Tech Information Technology** student passionate about con
 
 ---
 
-### 🐍 Contribution Grid Snake
+## 🐍 Contribution Grid Snake
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Mukil630/Mukil630/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake" />
