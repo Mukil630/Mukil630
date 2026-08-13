@@ -1,29 +1,28 @@
-<!-- TOP ANIMATED DIVIDER -->
+<!-- TOP DIVIDER -->
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900" />
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 </div>
 
-<!-- HERO DEVELOPER CODING ANIMATION -->
+<!-- HERO CODING GIF (Friend Prathap Sakthivel's Pixel Developer Animation) -->
 <div align="center">
   <img 
-    src="https://user-images.githubusercontent.com/74038190/216664197-03582496-863e-4d48-8d40-b262828b8a40.gif"
-    width="680"
-    alt="Futuristic AI Developer Coding Animation"
-    style="border-radius: 12px;"
+    src="https://i.pinimg.com/originals/fb/c6/f3/fbc6f31bd3b84159470b973aca7e0f97.gif"
+    width="520"
+    alt="Pixel Developer Coding Animation"
   />
 </div>
 
-<!-- DYNAMIC TYPING SVG -->
+<!-- TYPING ANIMATION -->
 <h1 align="center">
   <img 
-    src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=2500&pause=1500&color=0EA5E9&center=true&vCenter=true&width=920&height=50&lines=%E2%9A%A1+Hello+World!+I+am+Mukilarasu+S;%E2%98%95+Infosys+Certified+Java+Developer;%F0%9F%A4%96+AI+%26+Automation+Engineer;%F0%9F%9A%80+Architect+of+JARVIS+Autonomous+Voice+Agent;%F0%9F%92%BB+Full-Stack+SaaS+%26+Electron+Developer"
-    alt="Mukilarasu S Typing Header"
+    src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=0EA5E9&center=true&vCenter=true&width=940&lines=Hello+there,+I+am+Mukilarasu+S;Infosys+Certified+Java+Developer;AI+%26+Automation+Engineer;Full+Stack+%26+Agentic+AI+Architect"
+    alt="Typing SVG"
   />
 </h1>
 
-<!-- ANIMATED DIVIDER -->
+<!-- DIVIDER -->
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900" />
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 </div>
 
 <p align="center">
@@ -36,15 +35,14 @@
 
 ---
 
-## ⚡ About Me
+## About Me
 
 <div align="center">
   <img 
     align="right"
-    alt="Developer Coding Workspace"
+    alt="Developer Working Animation"
     width="380"
     src="https://camo.githubusercontent.com/d972b3fdd96f5bcda3cb22db4be78c78db577b6a4aa58d779523cc1f598f1e8d/68747470733a2f2f63646e2e6472696262626c652e636f6d2f75736572732f3733303730332f73637265656e73686f74732f363538313234332f6176656e746f2e676966"
-    style="border-radius: 8px;"
   />
 </div>
 
@@ -53,14 +51,14 @@
 - 🤖 **AI & Automation Specialist** building autonomous AI agents (JARVIS), LLM pipelines (Groq, OpenAI, Gemini), and OCR automation systems
 - 💼 Experienced in **Full-Stack SaaS Development** (Flask, Node.js, React, PostgreSQL) & Electron Desktop Applications
 - 🏢 Completed **Research & Development Internship at Hero MotoCorp Ltd.** & **IBM AI & Automation Internship**
-- 🧩 Practicing **Data Structures & Algorithms in Java** on LeetCode with strong Computer Networking foundations (NPTEL Certified)
-- 🚀 Dedicated, consistent, and passionate about engineering scalable, production-ready AI solutions
+- 🧩 Solved problems on **LeetCode** with strong DSA & Computer Networking foundations (NPTEL Certified)
+- 🚀 Dedicated, consistent, and passionate about engineering production-ready AI solutions
 
 **Email:** [mukilarasu55@gmail.com](mailto:mukilarasu55@gmail.com) | **LinkedIn:** [linkedin.com/in/mukilarasu-s-333771302](https://linkedin.com/in/mukilarasu-s-333771302) | **LeetCode:** [leetcode.com/u/Mukil55](https://leetcode.com/u/Mukil55)
 
 ---
 
-## 🛠️ Technical Stack (My Known Skills)
+## Tech Stack (My Skills)
 
 <div align="center">
   <img 
@@ -114,10 +112,10 @@
 
 ---
 
-## 📂 Featured Projects
+## Featured Projects
 
 - **🤖 [JARVIS – Autonomous Voice & System Automation Agent](https://github.com/Mukil630)** • *Python, Express, Web Speech API, ReAct Agent Architecture*  
-  Engineered an autonomous voice-controlled agent featuring a multi-step cognitive reasoning loop (ReAct), terminal command execution, live web telemetry, long-term memory store, and real-time HTML5 audio spectrum analyzer.
+  Engineered an autonomous voice-controlled agent featuring a multi-step cognitive reasoning loop (ReAct), terminal command execution, live web telemetry, long-term memory store, and HTML5 audio spectrum visualization.
 
 - **💬 [Botify – AI-Powered WhatsApp Bot SaaS Platform](https://github.com/Mukil630/Botify)** • *Flask, Node.js, Groq LLM API, PostgreSQL, Railway*  
   Production-ready multi-tenant SaaS platform enabling businesses to deploy custom AI-powered WhatsApp bots with automated appointment booking, context-aware AI chat, tiered subscriptions, and admin control dashboard.
@@ -133,7 +131,7 @@
 
 ---
 
-## 💼 Internships & Work Experience
+## Internships & Experience
 
 - **Hero MotoCorp Ltd. — Research & Development Intern (1 Month)**  
   *Gained practical exposure to automotive research, engineering workflows, testing protocols, and product development cycles.*
@@ -143,7 +141,7 @@
 
 ---
 
-## 🏆 Certifications
+## Certifications
 
 - 🏅 **Infosys Certified Java Programmer** — Official accreditation for advanced Java programming (2024)
 - 🏅 **Demystifying Networking** — NPTEL Certification in Core Computer Networking & TCP/IP Architecture (2025)
@@ -153,7 +151,26 @@
 
 ---
 
-## 📊 Coding Analytics & Activity
+## Let's Connect
+
+<div align="center">
+  <a href="https://linkedin.com/in/mukilarasu-s-333771302">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
+  <a href="https://leetcode.com/u/Mukil55">
+    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/>
+  </a>
+  <a href="mailto:mukilarasu55@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+  </a>
+  <a href="https://github.com/Mukil630">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</div>
+
+---
+
+## Coding Analytics & Activity
 
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=Mukil630&theme=tokyonight&margin-w=15&no-background=true&no-border=true" alt="Mukil630 Trophies" width="100%" />
@@ -174,14 +191,15 @@
 
 ---
 
-## 🐍 Contribution Grid Snake
+## Current Focus
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Mukil630/Mukil630/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake" />
-</p>
+- Building autonomous multi-agent AI ecosystems and voice-controlled intelligent tools (JARVIS)
+- Practicing Data Structures & Algorithms in Java on LeetCode
+- Strengthening enterprise Spring Boot microservices and full-stack SaaS architectures
 
 ---
 
-<p align="center">
-  <i>"Automating complex operations. Building responsive interfaces. Engineering AI for the future."</i>
-</p>
+<!-- BOTTOM DIVIDER -->
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+</div>
