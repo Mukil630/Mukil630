@@ -1,9 +1,9 @@
-<!-- HEADER BANNER -->
-<p align="center">
-  <img src="assets/tech_banner.svg" alt="MUKILARASU S banner" width="100%" />
-</p>
+<!-- TOP ANIMATED DIVIDER -->
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900" />
+</div>
 
-<!-- FUTURISTIC HERO CODING ANIMATION -->
+<!-- HERO DEVELOPER CODING ANIMATION -->
 <div align="center">
   <img 
     src="https://user-images.githubusercontent.com/74038190/216664197-03582496-863e-4d48-8d40-b262828b8a40.gif"
@@ -20,6 +20,11 @@
     alt="Mukilarasu S Typing Header"
   />
 </h1>
+
+<!-- ANIMATED DIVIDER -->
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900" />
+</div>
 
 <p align="center">
   <a href="https://linkedin.com/in/mukilarasu-s-333771302"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
