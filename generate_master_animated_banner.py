@@ -103,38 +103,7 @@ def generate_master_animated_banner():
         cv2.line(frame, (cyan_eye[0] - streak_len//2, cyan_eye[1]), 
                         (cyan_eye[0] + streak_len//2, cyan_eye[1]), (255, 255, 255), 1, cv2.LINE_AA)
                         
-        # -------------------------------------------------------------
-        # 2. HOLOGRAPHIC PORTAL HALO: Dual Rotating Segmented Rings
-        # -------------------------------------------------------------
-        rot_deg = (f * 6) % 360 # Smooth 360 rotation
-        ring_col = (200, 160, 40) # Cyan/slate
-        for arc_offset in [0, 60, 120, 180, 240, 300]:
-            start_a = rot_deg + arc_offset
-            cv2.ellipse(frame, portal_center, (portal_radius, portal_radius), 0, start_a, start_a + 35, ring_col, 1, cv2.LINE_AA)
-            
-        outer_r = int(portal_radius + 15 + math.sin(t * math.pi * 2) * 5)
-        cv2.ellipse(frame, portal_center, (outer_r, outer_r), -rot_deg * 0.5, 0, 45, (14, 165, 233), 1, cv2.LINE_AA)
-        cv2.ellipse(frame, portal_center, (outer_r, outer_r), -rot_deg * 0.5 + 180, 0, 45, (14, 165, 233), 1, cv2.LINE_AA)
-
-        # -------------------------------------------------------------
-        # 3. MUKIL BIOMETRIC HUD SCANLINE & BREATHING GLOW
-        # -------------------------------------------------------------
-        # Subtle breathing scale (0.998 to 1.002) in the portal area
-        breath = math.sin(t * math.pi * 2)
-        # Periodic vertical HUD scanline traveling down Mukil
-        scan_prog = (f % 30) / 30.0 # Twice per 60 frames
-        scan_y = int(80 + scan_prog * (540 - 80))
-        # Thin luminous cyan scanline restricted to portal circle
-        scan_half_w = int(math.sqrt(max(0, portal_radius**2 - (scan_y - portal_center[1])**2)) * 0.85)
-        if scan_half_w > 20:
-            cv2.line(frame, (portal_center[0] - scan_half_w, scan_y),
-                            (portal_center[0] + scan_half_w, scan_y), (255, 230, 80), 1, cv2.LINE_AA)
-            # Soft scanline halo
-            scan_overlay = np.zeros_like(frame)
-            cv2.line(scan_overlay, (portal_center[0] - scan_half_w, scan_y),
-                                   (portal_center[0] + scan_half_w, scan_y), (255, 200, 30), 4)
-            scan_blur = cv2.GaussianBlur(scan_overlay, (15, 15), 4)
-            frame = cv2.add(frame, (scan_blur * 0.35).astype(np.uint8))
+        # Center circle around Mukil remains 100% clean and static as in original artwork
 
         # -------------------------------------------------------------
         # 4. TECH STACK: Sequential Circuit Pulse Wave
