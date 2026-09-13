@@ -6,7 +6,7 @@
 <!-- HERO NEURAL PARTICLE RECONSTRUCTION (MUKILARASU S) -->
 <div align="center">
   <img 
-    src="assets/mukil_particle_profile.gif"
+    src="https://raw.githubusercontent.com/Mukil630/Mukil630/main/assets/mukil_particle_profile.gif"
     width="480"
     alt="Mukilarasu S - Quantum Particle Swarm Hologram"
   />
