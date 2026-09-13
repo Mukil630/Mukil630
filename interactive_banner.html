@@ -118,7 +118,7 @@
       display: block;
     }
 
-    /* Iron Man Layer with nanotech wipe clip */
+    /* Iron Man Layer: Direct High-Tech Swap */
     .layer-ironman {
       position: absolute;
       top: 0;
@@ -129,15 +129,13 @@
       z-index: 2;
       display: block;
       opacity: 0;
-      clip-path: circle(0% at 47.4% 50.1%);
-      transition: clip-path 0.55s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.35s ease;
+      transition: opacity 0.14s cubic-bezier(0.4, 0, 0.2, 1);
       pointer-events: none;
     }
 
-    /* Active Suit-Up State */
+    /* Active Suit-Up State: Instant direct swap to Iron Man */
     .banner-wrapper.suited .layer-ironman {
       opacity: 1;
-      clip-path: circle(48% at 47.4% 50.1%);
     }
 
     /* Nanotech Sparkles & HUD Canvas */
