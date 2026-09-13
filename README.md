@@ -4,7 +4,7 @@
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,30&height=4&section=header" width="100%"/>
 
 <!-- HERO DEVELOPER BANNER (MUKIL 630) -->
-<a href="https://mukil630.github.io/Mukil630/interactive_dots.html" target="_blank" title="MUKIL 630 - Full-Stack & Agentic AI Architect">
+<a href="https://mukil630.github.io/Mukil630/interactive_banner.html" target="_blank" title="MUKIL 630 - Full-Stack & Agentic AI Architect // Hover to Suit Up">
   <img 
     src="https://raw.githubusercontent.com/Mukil630/Mukil630/main/github_banner.gif" 
     width="100%"

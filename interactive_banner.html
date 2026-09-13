@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUKIL 630 | Interactive Nanotech Hero Banner (Mukil &lt;=&gt; Iron Man)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #06090e;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      padding: 20px;
+      user-select: none;
+    }
+
+    /* Ambient Cyber Glow */
+    .ambient-glow {
+      position: fixed;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, rgba(220, 38, 38, 0.08) 50%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(40px);
+    }
+
+    /* Header Bar */
+    header {
+      z-index: 10;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    .hud-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #ffffff 0%, #38bdf8 50%, #f43f5e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+    .hud-subtitle {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      letter-spacing: 1px;
+    }
+    .status-badge {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.75rem;
+      background: rgba(14, 165, 233, 0.1);
+      border: 1px solid rgba(14, 165, 233, 0.3);
+      color: #38bdf8;
+      transition: all 0.3s ease;
+    }
+    .status-badge.ironman {
+      background: rgba(225, 29, 72, 0.15);
+      border-color: rgba(225, 29, 72, 0.5);
+      color: #fb7185;
+      box-shadow: 0 0 15px rgba(225, 29, 72, 0.3);
+    }
+
+    /* Banner Container (1376x768 Aspect Ratio) */
+    .banner-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      aspect-ratio: 1376 / 768;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 35px rgba(14, 165, 233, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #000;
+      perspective: 1200px;
+      z-index: 10;
+    }
+
+    .banner-canvas {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.15s ease-out;
+    }
+
+    /* Base Mukil Layer */
+    .layer-mukil {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      z-index: 1;
+      display: block;
+    }
+
+    /* Iron Man Layer with nanotech wipe clip */
+    .layer-ironman {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      z-index: 2;
+      display: block;
+      opacity: 0;
+      clip-path: circle(0% at 47.4% 50.1%);
+      transition: clip-path 0.55s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.35s ease;
+      pointer-events: none;
+    }
+
+    /* Active Suit-Up State */
+    .banner-wrapper.suited .layer-ironman {
+      opacity: 1;
+      clip-path: circle(48% at 47.4% 50.1%);
+    }
+
+    /* Nanotech Sparkles & HUD Canvas */
+    #fx-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    /* Interactive Hover Hitbox over Mukil's Center Portal */
+    .hero-hitbox {
+      position: absolute;
+      top: 5%;
+      left: 35.5%;
+      width: 35%;
+      height: 80%;
+      z-index: 5;
+      cursor: crosshair;
+      border-radius: 50% 50% 30% 30%;
+    }
+
+    /* Arc Reactor Glowing Pulse Ring over Hitbox */
+    .hero-scanner {
+      position: absolute;
+      top: 40%;
+      left: 45%;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px dashed rgba(56, 189, 248, 0.4);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      animation: rotateScan 8s linear infinite;
+      opacity: 0.6;
+      transition: all 0.4s ease;
+    }
+    .banner-wrapper.suited .hero-scanner {
+      border-color: rgba(244, 63, 94, 0.8);
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.8), inset 0 0 15px rgba(244, 63, 94, 0.6);
+      transform: translate(-50%, -50%) scale(1.3);
+      opacity: 1;
+    }
+
+    @keyframes rotateScan {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Control Toolbar */
+    .controls-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+      z-index: 10;
+      justify-content: center;
+    }
+    .btn {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #e2e8f0;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      font-family: 'Fira Code', monospace;
+    }
+    .btn:hover {
+      background: rgba(14, 165, 233, 0.15);
+      border-color: #38bdf8;
+      color: #38bdf8;
+      box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+      transform: translateY(-2px);
+    }
+    .btn.active {
+      background: rgba(225, 29, 72, 0.2);
+      border-color: #f43f5e;
+      color: #fb7185;
+    }
+
+    /* Footer Hint */
+    .footer-hint {
+      margin-top: 14px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.78rem;
+      color: #64748b;
+      text-align: center;
+      z-index: 10;
+    }
+    .footer-hint span {
+      color: #38bdf8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+
+  <header>
+    <div class="hud-title">JARVIS PRIME // TONY STARK PROTOCOL</div>
+    <div class="hud-subtitle">Move cursor over Mukil to activate Nanotech Iron Man Suit-Up</div>
+    <div id="status-badge" class="status-badge">[STATUS: MUKIL 630 // STANDBY]</div>
+  </header>
+
+  <div class="banner-wrapper" id="banner-wrapper">
+    <div class="banner-canvas" id="banner-canvas">
+      <!-- Mukil Banner (Base) -->
+      <img src="github_banner.png" alt="Mukil 630 Developer Banner" class="layer-mukil" id="layer-mukil">
+
+      <!-- Iron Man Banner (Overlay) -->
+      <img src="github_banner_ironman.png" alt="Iron Man Mark 85 Banner" class="layer-ironman" id="layer-ironman">
+
+      <!-- Realtime FX Canvas -->
+      <canvas id="fx-canvas"></canvas>
+
+      <!-- Arc Reactor Scanner Ring -->
+      <div class="hero-scanner" id="hero-scanner"></div>
+
+      <!-- Hitbox over Mukil's Body -->
+      <div class="hero-hitbox" id="hero-hitbox" title="Hover over Mukil to activate Iron Man Armor"></div>
+    </div>
+  </div>
+
+  <!-- Control Buttons -->
+  <div class="controls-bar">
+    <button class="btn" id="btn-toggle-suit">
+      <span id="suit-icon">⚡</span> <span id="suit-text">Suit Up (Iron Man)</span>
+    </button>
+    <button class="btn" id="btn-auto-loop">
+      <span>🔄</span> Auto Loop
+    </button>
+    <button class="btn" id="btn-sound">
+      <span id="sound-icon">🔊</span> Audio FX: ON
+    </button>
+    <a href="github_banner_ironman.png" download="MUKIL_IRONMAN_BANNER.png" class="btn">
+      <span>📥</span> Iron Man Banner
+    </a>
+    <a href="github_banner.gif" download="MUKIL_SUITUP_ANIMATION.gif" class="btn">
+      <span>🎬</span> Animated GIF
+    </a>
+  </div>
+
+  <div class="footer-hint">
+    Tip: <span>Hover over Mukil</span> to trigger live nanotech suit-up with Arc Reactor surge and 3D parallax tilt.
+  </div>
+
+  <script>
+    // Audio Synthesizer via Web Audio API (Zero external assets needed)
+    class StarkAudioFX {
+      constructor() {
+        this.ctx = null;
+        this.enabled = true;
+      }
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          this.ctx = new AudioContext();
+        }
+      }
+      playSuitUp() {
+        if (!this.enabled) return;
+        this.init();
+        if (this.ctx.state === 'suspended') this.ctx.resume();
+
+        const now = this.ctx.currentTime;
+        
+        // Arc Reactor High-Tech Power Surge (Sine sweep 180Hz -> 820Hz)
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(140, now);
+        osc.frequency.exponentialRampToValueAtTime(750, now + 0.45);
+
+        // Lowpass filter for smooth energy whoosh
+        const filter = this.ctx.createBiquadFilter();
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(400, now);
+        filter.frequency.exponentialRampToValueAtTime(3200, now + 0.35);
+
+        gain.gain.setValueAtTime(0.01, now);
+        gain.gain.linearRampToValueAtTime(0.22, now + 0.12);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.65);
+
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.65);
+
+        // High frequency chime
+        const chime = this.ctx.createOscillator();
+        const chimeGain = this.ctx.createGain();
+        chime.type = 'sine';
+        chime.frequency.setValueAtTime(1200, now + 0.15);
+        chime.frequency.exponentialRampToValueAtTime(2400, now + 0.4);
+        chimeGain.gain.setValueAtTime(0.01, now + 0.15);
+        chimeGain.gain.linearRampToValueAtTime(0.12, now + 0.25);
+        chimeGain.gain.exponentialRampToValueAtTime(0.001, now + 0.55);
+
+        chime.connect(chimeGain);
+        chimeGain.connect(this.ctx.destination);
+        chime.start(now + 0.15);
+        chime.stop(now + 0.55);
+      }
+      playDeSuit() {
+        if (!this.enabled) return;
+        this.init();
+        if (this.ctx.state === 'suspended') this.ctx.resume();
+
+        const now = this.ctx.currentTime;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(600, now);
+        osc.frequency.exponentialRampToValueAtTime(120, now + 0.4);
+
+        gain.gain.setValueAtTime(0.15, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.4);
+      }
+    }
+
+    const audio = new StarkAudioFX();
+
+    // DOM Elements
+    const wrapper = document.getElementById('banner-wrapper');
+    const canvas = document.getElementById('banner-canvas');
+    const hitbox = document.getElementById('hero-hitbox');
+    const statusBadge = document.getElementById('status-badge');
+    const scanner = document.getElementById('hero-scanner');
+    const fxCanvas = document.getElementById('fx-canvas');
+    const ctx = fxCanvas.getContext('2d');
+
+    const btnToggle = document.getElementById('btn-toggle-suit');
+    const btnAuto = document.getElementById('btn-auto-loop');
+    const btnSound = document.getElementById('btn-sound');
+    const suitText = document.getElementById('suit-text');
+
+    let isSuited = false;
+    let autoLoopTimer = null;
+    let particles = [];
+
+    // Resize FX canvas
+    function resizeCanvas() {
+      fxCanvas.width = wrapper.clientWidth;
+      fxCanvas.height = wrapper.clientHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Particle System
+    class NanoParticle {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        const angle = Math.random() * Math.PI * 2;
+        const speed = Math.random() * 4 + 2;
+        this.vx = Math.cos(angle) * speed;
+        this.vy = Math.sin(angle) * speed;
+        this.life = 1.0;
+        this.decay = Math.random() * 0.035 + 0.02;
+        this.color = Math.random() > 0.4 ? '#38bdf8' : '#fb7185';
+        this.size = Math.random() * 2.5 + 1;
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life -= this.decay;
+      }
+      draw(c) {
+        c.save();
+        c.globalAlpha = Math.max(0, this.life);
+        c.fillStyle = this.color;
+        c.shadowColor = this.color;
+        c.shadowBlur = 8;
+        c.beginPath();
+        c.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        c.fill();
+        c.restore();
+      }
+    }
+
+    function burstParticles(cx, cy, count = 45) {
+      for (let i = 0; i < count; i++) {
+        particles.push(new NanoParticle(cx, cy));
+      }
+    }
+
+    function renderLoop() {
+      ctx.clearRect(0, 0, fxCanvas.width, fxCanvas.height);
+      for (let i = particles.length - 1; i >= 0; i--) {
+        particles[i].update();
+        particles[i].draw(ctx);
+        if (particles[i].life <= 0) {
+          particles.splice(i, 1);
+        }
+      }
+      requestAnimationFrame(renderLoop);
+    }
+    renderLoop();
+
+    // State Management
+    function setSuitState(suited) {
+      if (isSuited === suited) return;
+      isSuited = suited;
+
+      const arcX = fxCanvas.width * 0.474;
+      const arcY = fxCanvas.height * 0.501;
+
+      if (isSuited) {
+        wrapper.classList.add('suited');
+        statusBadge.classList.add('ironman');
+        statusBadge.innerText = '[PROTOCOL: MARK 85 ENGAGED // ARC REACTOR: 100% // PILOT: MUKIL 630]';
+        suitText.innerText = 'De-Suit (Mukil)';
+        audio.playSuitUp();
+        burstParticles(arcX, arcY, 65);
+      } else {
+        wrapper.classList.remove('suited');
+        statusBadge.classList.remove('ironman');
+        statusBadge.innerText = '[STATUS: MUKIL 630 // AUTONOMOUS AI ARCHITECT // STANDBY]';
+        suitText.innerText = 'Suit Up (Iron Man)';
+        audio.playDeSuit();
+        burstParticles(arcX, arcY, 35);
+      }
+    }
+
+    // Cursor Hover Triggers
+    hitbox.addEventListener('mouseenter', () => {
+      if (!autoLoopTimer) setSuitState(true);
+    });
+
+    hitbox.addEventListener('mouseleave', () => {
+      if (!autoLoopTimer) setSuitState(false);
+    });
+
+    // 3D Parallax Tilt on Cursor Move
+    wrapper.addEventListener('mousemove', (e) => {
+      const rect = wrapper.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const rotX = ((y / rect.height) - 0.5) * -12; // tilt degrees
+      const rotY = ((x / rect.width) - 0.5) * 12;
+
+      canvas.style.transform = `rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg)`;
+
+      // Dynamic Arc Reactor tracking
+      if (isSuited) {
+        const arcRelX = (x / rect.width) * 100;
+        const arcRelY = (y / rect.height) * 100;
+        scanner.style.left = `${x}px`;
+        scanner.style.top = `${y}px`;
+      }
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+      canvas.style.transform = 'rotateX(0deg) rotateY(0deg)';
+      scanner.style.left = '45%';
+      scanner.style.top = '40%';
+    });
+
+    // Manual Toggle Button
+    btnToggle.addEventListener('click', () => {
+      setSuitState(!isSuited);
+    });
+
+    // Auto Loop Toggle
+    btnAuto.addEventListener('click', () => {
+      if (autoLoopTimer) {
+        clearInterval(autoLoopTimer);
+        autoLoopTimer = null;
+        btnAuto.classList.remove('active');
+        btnAuto.innerHTML = '<span>🔄</span> Auto Loop';
+      } else {
+        btnAuto.classList.add('active');
+        btnAuto.innerHTML = '<span>⏹️</span> Stop Loop';
+        autoLoopTimer = setInterval(() => {
+          setSuitState(!isSuited);
+        }, 2200);
+      }
+    });
+
+    // Sound Toggle
+    btnSound.addEventListener('click', () => {
+      audio.enabled = !audio.enabled;
+      btnSound.innerHTML = audio.enabled ? '<span id="sound-icon">🔊</span> Audio FX: ON' : '<span id="sound-icon">🔇</span> Audio FX: OFF';
+      btnSound.classList.toggle('active', !audio.enabled);
+    });
+  </script>
+</body>
+</html>
