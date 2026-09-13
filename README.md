@@ -1,20 +1,20 @@
-<!-- TOP DIVIDER -->
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
-</div>
 
-<!-- HERO INTERACTIVE B&W DOT MATRIX (MUKILARASU S) -->
-<div align="center">
-  <a href="https://mukil630.github.io/Mukil630/interactive_dots.html" target="_blank" title="Click to open Live Interactive Particle Canvas!">
-    <img 
-      src="https://raw.githubusercontent.com/Mukil630/Mukil630/main/assets/mukil_particle_profile.gif"
-      width="440"
-      alt="Mukilarasu S - Interactive B&W Dot Matrix"
-    />
-  </a>
-  <p align="center">
-    <sub>👆 <i><b>Cursor-Reactive B&W Particle Matrix</b> &bull; Click to open live interactive canvas!</i></sub>
-  </p>
+<!-- Glow stripe top -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,30&height=4&section=header" width="100%"/>
+
+<!-- HERO DEVELOPER BANNER (MUKIL 630) -->
+<a href="https://mukil630.github.io/Mukil630/interactive_dots.html" target="_blank" title="MUKIL 630 - Full-Stack & Agentic AI Architect">
+  <img 
+    src="https://raw.githubusercontent.com/Mukil630/Mukil630/main/github_banner.png" 
+    width="100%"
+    alt="MUKIL 630 - Turning Reasoning Into Autonomous Reality"
+  />
+</a>
+
+<!-- Glow stripe bottom -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,30&height=4&section=footer" width="100%"/>
+
 </div>
 
 <!-- TYPING ANIMATION -->
