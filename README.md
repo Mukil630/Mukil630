@@ -3,13 +3,18 @@
   <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 </div>
 
-<!-- HERO NEURAL PARTICLE RECONSTRUCTION (MUKILARASU S) -->
+<!-- HERO INTERACTIVE B&W DOT MATRIX (MUKILARASU S) -->
 <div align="center">
-  <img 
-    src="https://raw.githubusercontent.com/Mukil630/Mukil630/main/assets/mukil_particle_profile.gif"
-    width="480"
-    alt="Mukilarasu S - Quantum Particle Swarm Hologram"
-  />
+  <a href="https://mukil630.github.io/Mukil630/interactive_dots.html" target="_blank" title="Click to open Live Interactive Particle Canvas!">
+    <img 
+      src="https://raw.githubusercontent.com/Mukil630/Mukil630/main/assets/mukil_particle_profile.gif"
+      width="440"
+      alt="Mukilarasu S - Interactive B&W Dot Matrix"
+    />
+  </a>
+  <p align="center">
+    <sub>👆 <i><b>Cursor-Reactive B&W Particle Matrix</b> &bull; Click to open live interactive canvas!</i></sub>
+  </p>
 </div>
 
 <!-- TYPING ANIMATION -->

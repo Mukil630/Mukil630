@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUKILARASU S // Interactive B&W Particle Matrix</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #080C14;
+      color: #F8FAFC;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+      user-select: none;
+    }
+    
+    .header-bar {
+      position: absolute;
+      top: 24px;
+      text-align: center;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .header-bar h1 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+    .header-bar p {
+      font-size: 13px;
+      color: #94A3B8;
+      letter-spacing: 1px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid rgba(14, 165, 233, 0.4);
+      border-radius: 20px;
+      color: #38BDF8;
+      font-size: 11px;
+      font-family: monospace;
+      margin-top: 6px;
+    }
+    
+    #canvas-container {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      max-width: 95vw;
+      max-height: 95vw;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      background: radial-gradient(circle at center, rgba(15, 23, 42, 0.6) 0%, #080C14 100%);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      cursor: crosshair;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .hud-corners {
+      position: absolute;
+      inset: 12px;
+      pointer-events: none;
+      border: 1px solid transparent;
+    }
+    .hud-corners::before, .hud-corners::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-color: rgba(56, 189, 248, 0.6);
+    }
+    .hud-corners::before {
+      top: 0; left: 0;
+      border-top: 2px solid; border-left: 2px solid;
+    }
+    .hud-corners::after {
+      bottom: 0; right: 0;
+      border-bottom: 2px solid; border-right: 2px solid;
+    }
+    
+    .instruction-bar {
+      position: absolute;
+      bottom: 24px;
+      font-size: 13px;
+      color: #64748B;
+      font-family: monospace;
+      letter-spacing: 1px;
+      pointer-events: none;
+    }
+    .instruction-bar span {
+      color: #38BDF8;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-bar">
+    <h1>Mukilarasu S</h1>
+    <p>AI SYSTEMS ARCHITECT &bull; DIGITAL TWIN</p>
+    <div class="badge">INTERACTIVE PARTICLE MATRIX &bull; B&amp;W ONLY</div>
+  </div>
+
+  <div id="canvas-container">
+    <canvas id="particleCanvas" width="600" height="600"></canvas>
+    <div class="hud-corners"></div>
+  </div>
+
+  <div class="instruction-bar">
+    &gt; <span>MOVE CURSOR OVER THE IMAGE</span> TO INTERACT WITH PARTICLES
+  </div>
+
+  <script>
+    const canvas = document.getElementById("particleCanvas");
+    const ctx = canvas.getContext("2d");
+    const container = document.getElementById("canvas-container");
+
+    const W = 600;
+    const H = 600;
+    
+    // Mouse state
+    const mouse = {
+      x: -1000,
+      y: -1000,
+      radius: 65
+    };
+
+    function updateMousePos(clientX, clientY) {
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = W / rect.width;
+      const scaleY = H / rect.height;
+      mouse.x = (clientX - rect.left) * scaleX;
+      mouse.y = (clientY - rect.top) * scaleY;
+    }
+
+    container.addEventListener("mousemove", (e) => {
+      updateMousePos(e.clientX, e.clientY);
+    });
+
+    container.addEventListener("mouseleave", () => {
+      mouse.x = -1000;
+      mouse.y = -1000;
+    });
+
+    container.addEventListener("touchmove", (e) => {
+      if (e.touches.length > 0) {
+        updateMousePos(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    container.addEventListener("touchend", () => {
+      mouse.x = -1000;
+      mouse.y = -1000;
+    });
+
+    class Particle {
+      constructor(originX, originY, size, alpha, brightness) {
+        this.ox = originX;
+        this.oy = originY;
+        this.x = originX;
+        this.y = originY;
+        this.vx = 0;
+        this.vy = 0;
+        this.size = size;
+        this.alpha = alpha;
+        this.brightness = brightness;
+        
+        // Pure B&W color shades (white/silver grayscale)
+        const grayVal = Math.min(255, Math.floor(brightness * 1.05 + 25));
+        this.color = `rgba(${grayVal}, ${grayVal}, ${grayVal}, ${alpha})`;
+      }
+
+      update() {
+        // Distance to cursor
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        // Repel from cursor
+        if (dist < mouse.radius && dist > 0) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          const angle = Math.atan2(dy, dx);
+          // Push away
+          this.vx -= Math.cos(angle) * force * 7.0;
+          this.vy -= Math.sin(angle) * force * 7.0;
+        }
+
+        // Spring return to origin
+        const springDx = this.ox - this.x;
+        const springDy = this.oy - this.y;
+        this.vx += springDx * 0.08;
+        this.vy += springDy * 0.08;
+
+        // Friction damping
+        this.vx *= 0.84;
+        this.vy *= 0.84;
+
+        this.x += this.vx;
+        this.y += this.vy;
+      }
+
+      draw() {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    let particles = [];
+
+    // Load dots from JSON
+    fetch('assets/mukil_dots.json')
+      .then(res => res.json())
+      .then(data => {
+        particles = data.map(d => new Particle(d[0], d[1], d[2], d[3], d[4]));
+        animate();
+      })
+      .catch(err => {
+        console.error("Error loading particles:", err);
+      });
+
+    function animate() {
+      ctx.clearRect(0, 0, W, H);
+
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+      }
+
+      requestAnimationFrame(animate);
+    }
+  </script>
+</body>
+</html>
