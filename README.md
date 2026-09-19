@@ -8,7 +8,7 @@
   <img 
     src="https://raw.githubusercontent.com/Mukil630/Mukil630/main/github_banner.gif" 
     width="100%"
-    alt="MUKIL  - Turning Reasoning Into Autonomous Reality"
+    alt="MUKIL 630 - Turning Reasoning Into Autonomous Reality"
   />
 </a>
 
